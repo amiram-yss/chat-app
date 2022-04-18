@@ -4,6 +4,7 @@
     position: relative;
     
     max-width: 540px;
+    min-width: 400px;
     height: 2.1cm;
     background-color: blanchedalmond;
     flood-color: brown;
@@ -15,9 +16,11 @@
     max-width: 30px;
     max-height: 30px;
 }
-.float-right {
+.time-text {
     position: absolute;
     float:right;
     bottom: 3px;
     right: 3px;
+    color: black;
+    padding-right: 5px;
 }
