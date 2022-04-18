@@ -1,7 +1,23 @@
-.container {
+.chat-tile-container {
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    position: relative;
+    
     max-width: 540px;
     height: 2.1cm;
+    background-color: blanchedalmond;
     flood-color: brown;
     border-color: transparent;
     position: relative;
+}
+
+.prof-pic {
+    max-width: 30px;
+    max-height: 30px;
+}
+.float-right {
+    position: absolute;
+    float:right;
+    bottom: 3px;
+    right: 3px;
 }
