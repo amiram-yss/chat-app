@@ -1,23 +1,29 @@
-import { Button, ToggleButton, Flex } from 'react-bootstrap';
+/**@author Amiram Yassif */
+import { Button, Badge } from 'react-bootstrap';
+import 'bootstrap'
 import './ChatTile2.css'
 
-function ChatTile2() {
+/**
+ * Chat tile, set on the main page on the left.
+ * @param {*} args
+ * @param {unreadCounter} Num of unread messages
+ * @param {profPic} Profile picture
+ * @param {lastMessageTime} Recieve time of last message
+ * @param {chatTitle} Name of content
+ * @param {lastMessage} Test of last message.
+ * @returns 
+ */
+function ChatTile2(args) {
     return (
-        <Button className='container' variant='light'>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">.col-md-4</div>
-                    <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
-                    <div class="col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
-                </div>
-                <div class="row">
-                    <div class="col-auto me-auto">.col-auto .me-auto</div>
-                    <div class="col-auto">.col-auto</div>
-                </div>
+        <Button className="chat-tile-container">
+            {args.unreadCounter < 1? <></>:<Badge className='notification-bubble'>{args.unreadCounter}</Badge>}
+            <img className='prof-pic' src={args.profPic}></img>
+            <div className='time-text'>
+                {args.lastMessageTime}
             </div>
+            <div className='chat-title'>{args.chatTitle}</div>
+            <div className='last-message'>{args.lastMessage}</div>
+            
         </Button>
     );
 }
