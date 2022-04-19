@@ -28,4 +28,4 @@ function ChatTile(args) {
     );
 }
 
-export default ChatTile2
+export default ChatTile
