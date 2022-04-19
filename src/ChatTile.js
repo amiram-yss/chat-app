@@ -13,7 +13,7 @@ import './ChatTile.css'
  * @param {lastMessage} Test of last message.
  * @returns 
  */
-function ChatTile2(args) {
+function ChatTile(args) {
     return (
         <Button className="chat-tile-container">
             {args.unreadCounter < 1? <></>:<Badge className='notification-bubble'>{args.unreadCounter}</Badge>}
