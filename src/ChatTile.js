@@ -1,7 +1,7 @@
 /**@author Amiram Yassif */
 import { Button, Badge } from 'react-bootstrap';
 import 'bootstrap'
-import './ChatTile2.css'
+import './ChatTile.css'
 
 /**
  * Chat tile, set on the main page on the left.
