@@ -3,10 +3,21 @@
 }
 
 .card{
-max-height: 250pt;
-max-width: 500pt;
+max-height: 80%;
+max-width: 70%;
+margin: 15%,15%,15%,15% ;
+padding: 75%,70%,60%,0%;
 
 }
+
+#cardBlock {
+    margin: 15%, 15%, 15%, 15%;
+    max-height: 600px;
+    padding: 15%,70%,20%,30%;
+
+}
+
+
 
 
 
