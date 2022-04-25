@@ -2,7 +2,7 @@
  * @author Amiram Yassif
  */
 import { Card, Container } from 'react-bootstrap'
-import './MessageBubbleDesign.css'
+import './MessageBubble.css'
 
 /**
  * Message bubble item for chat view
