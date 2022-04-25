@@ -1,9 +1,8 @@
 .chat-tile-container {
     border-radius: 5px;
-    position: relative;    
-    max-width: 540px;
-    min-width: 400px;
-    height: 2cm;
+    position: relative;
+    width: 300px;
+    height: 1.3cm;
     background-color: blanchedalmond;
     flood-color: brown;
     border-color: transparent;
@@ -12,19 +11,20 @@
 }
 .chat-tile-container:hover {
     background-color: bisque;
+    color:#303030;
 }
 .chat-tile-container:focus {
     background-color: burlywood;
+    color:darkred;
+    outline: 1px;
+    box-shadow: none;
 }
-.prof-pic {
-    max-width: 30px;
-    max-height: 30px;
-}
+
 .time-text {
     position: absolute;
     float:right;
-    bottom: 6px;
-    right: 9px;
+    bottom: 0px;
+    right: 0px;
     color: #303030;
     padding-right: 5px;
     font-weight: 100;
@@ -32,27 +32,28 @@
 }
 .prof-pic {
     position: absolute;
-    min-height: 1.7cm;
-    min-width: 1.7cm;
-    max-width: 1.7cm;
-    max-height: 1.7cm;
-    left:5px;
-    top:5px;
+    min-height: 1.2cm;
+    min-width: 1.2cm;
+    max-width: 1.2cm;
+    max-height: 1.2cm;
+    left:1px;
+    top:1px;
     border-radius: 50%;
 }
 .chat-title {
     position: relative;
-    left:1.8cm;
-    top: -3px;
+    left:1.05cm;
+    top: -7px;
     width: 5px;
-    font-weight: 650;
-    font-size: larger;
+    font-weight: 500;
+    font-size: large;
 }
 .last-message {
     position: relative;
     color: black;
-    left: 68px;
-    bottom: 0px;
+    left: 1.05cm;
+    bottom: 8px;
+    font-size: small;
     direction: ltr;
     text-align: left;
     width:max-content;
@@ -60,5 +61,10 @@
 .notification-bubble {
     position: relative;
     float: right;
-    right: 0px;
+    right: -7px;
+    top: -2px;
+}
+.spacer {
+    min-height: 2px;
+    max-height: 2px;
 }

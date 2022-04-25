@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+//import './server info/Users'
 import ChatTile from './ChatTile';
 import LoginForm from './LoginForm';
 import React from 'react';
@@ -20,8 +21,8 @@ function App() {
 
   return (
     <Welcome />
-
   );
 }
+
 
 export default App;
