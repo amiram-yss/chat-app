@@ -11,16 +11,20 @@
 }
 .chat-tile-container:hover {
     background-color: bisque;
+    color:#303030;
 }
 .chat-tile-container:focus {
     background-color: burlywood;
+    color:darkred;
+    outline: 1px;
+    box-shadow: none;
 }
 
 .time-text {
     position: absolute;
     float:right;
-    bottom: 6px;
-    right: 9px;
+    bottom: 0px;
+    right: 0px;
     color: #303030;
     padding-right: 5px;
     font-weight: 100;
