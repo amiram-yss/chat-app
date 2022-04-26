@@ -19,9 +19,9 @@ function LoginCard({Login}) {
 
 
             <form onSubmit={submitHandler}>
-                <div className="row">
-                    <div className="col"><span className="text-danger">User Name</span></div>
-                    <div className="col-9 ">
+                <div className="row inputRow">
+                    <div className="col-4"><span className="text-danger">User Name</span></div>
+                    <div className="col-8 ">
 
                         <div className="form-outline mb-4">
                             <input type="text" id="form3Example5" className="form-control" onChange={e => setDetails({...details, name: e.target.value})} value={details.name}/>
@@ -30,9 +30,9 @@ function LoginCard({Login}) {
                     </div>
                 </div>
 
-                <div className="row">
-                    <div className="col"><span className="text-danger">Password</span></div>
-                    <div className="col-9 ">
+                <div className="row inputRow">
+                    <div className="col-4"><span className="text-danger">Password</span></div>
+                    <div className="col-8 ">
 
                         <div className="form-outline mb-4">
                             <input type="password" id="form3Example2" className="form-control" onChange={e => setDetails({...details, password: e.target.value})} value={details.password}/>
@@ -42,7 +42,7 @@ function LoginCard({Login}) {
                 </div>
 
 
-                <div className="row">
+                <div className="row inputRow">
                     <button type="submit" className="btn btn-primary btn-block mb-4">
                         Sign up
                     </button>

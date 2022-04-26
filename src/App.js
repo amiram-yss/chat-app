@@ -25,20 +25,20 @@ function App() {
     console.log(details);
 
     for (let index = 0; index < users.length; index++) {
-        const element = users[index];
-        if (details.name == element.userName && details.password == element.pass) {
-            console.log("Well Done!!!");
-            setUser({
-                name: details.name
-            });
-            return;
-        }
+      const element = users[index];
+      if (details.name == element.userName && details.password == element.pass) {
+        console.log("Well Done!!!");
+        setUser({
+          name: details.name
+        });
+        return;
+      }
     }
     console.log("NO!");
 
-}
+  }
 
-  const [user, setUser] = useState({name:"", nickName:""});
+  const [user, setUser] = useState({ name: "", nickName: "" });
 
 
   return (
@@ -46,9 +46,8 @@ function App() {
 
       <div className='App'>
         {(user.name != "") ? (
-          <RegistrationForm />
+          <LoginForm />
         ) : (
-
           <Welcome Login={Login} />
         )
 
