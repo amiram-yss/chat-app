@@ -14,9 +14,10 @@ function ChatInterface() {
 
             </div>
             <div className='right flex-sub-container'>
-                <div className='user-info2'/>
-                <div className='messages-container'/>
-                <div className='submit-block flex-item-bottom'/>
+            <div className='user-info2'/>
+            <div className='messages-container'/>
+            <div className='submit-block flex-item-bottom'/>
+
             </div>
         </div>
     )
