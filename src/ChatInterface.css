@@ -1,0 +1,42 @@
+.split-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    background-color: green;
+    min-width: 140px;
+}
+
+.right {
+    flex: 1 0 70vh;
+    background-color: #00f;
+}
+
+.user-info {
+    height: 0.8cm;
+    background-color: lightgray;
+    border-right-color: blueviolet;
+    border-right: 1px;
+}
+
+.user-info2 {
+    height: 0.8cm;
+    background-color: azure;
+    border-right-color: blueviolet;
+    border-right: 1px;
+}
+
+.submit-block {
+    display: inline;
+    background-color: red;
+    bottom: 0px;
+    height: 10px;
+    bottom: 0px;
+}
+
+.messages-container {
+    background-color: chocolate;
+    height: 30px;
+}
