@@ -1,14 +1,89 @@
+import users from '../server info/Users.js'
+import Chat from './Chat.js'
+import Server from './Server.js'
+
+console.log("hahaha")
+class UserInfo {
+    constructor(name, password) {
+        this.name = name
+        this.password = password
+    }
+} 
+
 class User {
     /**
      * Single user object
      * @param {*} name name of user (key val)
      * @param {*} picture picture
-     * @param {*} password password
+     * @param {*} server server
      */
-    constructor(name, picture, password) {
+    constructor(name, picture, server) {
         this.name = name
         this.picture = picture
-        this.password = password
-    }
+        this.server = server
+        this.contacts = new Map()
+        this.chats = new Array()
+    } 
     
+    addContact(user) {
+        if (this.server.searchUser(user.name) && !this.contacts.has(user.name)) {
+            this.contacts.set(user.name, user)
+            let chat = new Chat([this, user])
+            user.contacts.set(this.name, this)
+            this.chats.push(chat)
+            user.addChat(chat)
+        }        
+    }
+    createChat(users) {
+        for(let i = 0; i < users.length;i++){
+            if(this.server.searchUser(users[i].name)==false) return null
+        }
+        let chat = new Chat(users)
+        for(let i = 0; i < users.length; i++){
+            users[i].addChat(chat)
+        }
+    }
+    addChat(chat) {
+        this.chats.push(chat)
+    }
+} 
+
+function consoleUser(user, index) {
+    console.log("USER:")
+    console.log("===============")
+    console.log(user.name)
+    console.log("contacts:")
+    console.log(user.contacts.keys())
+
+    console.log("chats:")
+    for (let i = 0; i < user.chats.length; i++) {
+        console.log("chat " + i)
+        for(let j = 0; j < user.chats[i].users.length; j++)
+        console.log(user.chats[i].users[j].name)
+    }
 }
+
+function main() {
+    let server = new Server()
+    server.initialize()
+    let array = Array.from(server.userDB.values())
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (i != j) {
+                array[i].addContact(array[j])
+            }
+        }
+    }
+    array[0].createChat(array)
+    server.register("haha", "password", "jjjj.png")
+    array[0].addContact(new User("haha", "jjjj.png"))
+    array = Array.from(server.userDB.values())
+    array.forEach(consoleUser)
+}
+export default User
+main()
+
+
+
+
+
