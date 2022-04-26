@@ -1,5 +1,9 @@
 .welcomeText{
     position: absolute;
+    top: 10%;
+    right: 70%;
+    margin-left: 10%;
+
 }
 
 .card{
@@ -10,12 +14,31 @@ padding: 75%,70%,60%,0%;
 
 }
 
+/*
+
+    max-height: 300px;
+
+
+*/
+
 #cardBlock {
     margin: 15%, 15%, 15%, 15%;
-    max-height: 600px;
+    max-height: 500px;
+
     padding: 15%,70%,20%,30%;
 
 }
+
+.inputRow{
+    max-height: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.innerCard{
+    padding-bottom: 50pt;
+}
+
+
 
 
 
