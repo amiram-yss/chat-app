@@ -1,14 +1,15 @@
 import users from '../server info/Users.js'
 import Chat from './Chat.js'
+import Server from './Server.js'
 
 console.log("hahaha")
-
+let server = new Server()
 class UserInfo {
     constructor(name, password) {
         this.name = name
         this.password = password
     }
-}
+} 
 
 class User {
     /**
@@ -20,27 +21,23 @@ class User {
     constructor(name, picture) {
         this.name = name
         this.picture = picture
-        this.contacts = new Array()
+        this.contacts = new Map()
         this.chats = new Array()
-    }
+    } 
     
     addContact(user) {
-        let isFound = false
-        for (let index = 0; index < this.contacts.length; index++) {
-            if (this.contacts[index].name === user.name && this.contacts[index].picture === user.picture) {
-                isFound = true
-                break
-            }
-        }
-        if (!isFound) {
-            this.contacts.push(user)
+        if (server.searchUser(user.name) && !this.contacts.has(user.name)) {
+            this.contacts.set(user.name, user)
             let chat = new Chat([this, user])
-            user.contacts.push(this)
+            user.contacts.set(this.name, this)
             this.chats.push(chat)
             user.addChat(chat)
         }        
     }
     createChat(users) {
+        for(let i = 0; i < users.length;i++){
+            if(server.searchUser(users[i].name)==false) return
+        }
         let chat = new Chat(users)
         for(let i = 0; i < users.length; i++){
             users[i].addChat(chat)
@@ -49,17 +46,15 @@ class User {
     addChat(chat) {
         this.chats.push(chat)
     }
-}
+} 
 
 function consoleUser(user, index) {
     console.log("USER:")
     console.log("===============")
     console.log(user.name)
     console.log("contacts:")
-    for (let i = 0; i < user.contacts.length; i++) {
-        
-        console.log(user.contacts[i].name)
-    }
+    console.log(user.contacts.keys())
+
     console.log("chats:")
     for (let i = 0; i < user.chats.length; i++) {
         console.log("chat " + i)
@@ -83,9 +78,11 @@ function main() {
         }
     }
     array[0].createChat(array)
+    server.addUser("haha", "password", "jjjj.png")
+    array[0].addContact(new User("haha", "jjjj.png"))
     array.forEach(consoleUser)
 }
-
+export default User
 main()
 
 
