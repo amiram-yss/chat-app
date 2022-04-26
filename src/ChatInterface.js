@@ -13,10 +13,11 @@ function ChatInterface() {
                 </div>
 
             </div>
-            <div className='right'>
-                <div className='user-info2'/>
-                <div className='messages-container'/>
-                <div className='submit-block'/>
+            <div className='right flex-sub-container'>
+            <div className='user-info2'/>
+            <div className='messages-container'/>
+            <div className='submit-block flex-item-bottom'/>
+
             </div>
         </div>
     )
