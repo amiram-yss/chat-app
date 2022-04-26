@@ -1,26 +1,46 @@
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import './ChatInterface.css'
 
 function ChatInterface() {
     return (
-        <div className='split-screen'>
-            <div className='left'>
-                <div className='user-info'>
+        <Container className='screen'>
+            <Row className='screen'>
+                <Col className='left'>
+                    <Row className='logged-user-info'>
 
-                </div>
-                <div className='chat-list'>
+                    </Row>
+                </Col>
+                <Col className='right'>
+                    <Row className='chat-user-info'>
 
-                </div>
+                    </Row>
+                    <Row className='messages-container'>
 
-            </div>
-            <div className='right flex-sub-container'>
-            <div className='user-info2'/>
-            <div className='messages-container'/>
-            <div className='submit-block flex-item-bottom'/>
+                    </Row>
+                    <Row className='submit-block'>
 
-            </div>
-        </div>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
 export default ChatInterface
+/**
+ * <div className='split-screen'>
+            <div className='left'>
+                <div className='user-info'>
+                    
+                </div>
+                <div className='chat-list'>
+
+                </div>
+            </div>
+            <div className='right flex-sub-container'>
+                <div className='user-info2' />
+                <div className='messages-container' />
+                <div className='submit-block flex-item-bottom' />
+            </div>
+        </div>
+ */
