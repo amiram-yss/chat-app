@@ -1,10 +1,13 @@
 class Chat {
-
     constructor(users) {
         this.users = users
-        this.messages = Array()
+        this.lastMessage = null
     }
     sendMessage(message) {
-        this.messages.push(message)
+        if (this.lastMessage == null) {
+            this.lastMessage = message
+        }
+        message.previous = this.lastMessage
+        this.lastMessage = message
     }
-} export default Chat
+}

@@ -13,18 +13,8 @@ import { BrowserRouter, Routes, Route, Switch, Link } from 'react-router-dom';
 function LoginForm() {
     return (
 
-      
-
-        /**
-         * 
-         * Bikini Bottom
-         * 
-
-
-
-
-               
-         */
+     
+       
 
         <section className="background ">
             <div className="px-4 py-5 px-md-5 text-center " >
@@ -44,8 +34,7 @@ function LoginForm() {
                             <div className="card">
                                 <div className="card-body py-5 px-md-5">
                         
-                                    <LoginCard/>
-
+                                
                                 </div>
                             </div>
                         </div>
