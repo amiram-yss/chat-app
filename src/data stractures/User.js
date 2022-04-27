@@ -3,7 +3,6 @@ import Chat from './Chat.js'
 import Server from './Server.js'
 
 console.log("hahaha")
-let server = new Server()
 class UserInfo {
     constructor(name, password) {
         this.name = name
@@ -16,17 +15,18 @@ class User {
      * Single user object
      * @param {*} name name of user (key val)
      * @param {*} picture picture
-     * @param {*} password password
+     * @param {*} server server
      */
-    constructor(name, picture) {
+    constructor(name, picture, server) {
         this.name = name
         this.picture = picture
+        this.server = server
         this.contacts = new Map()
         this.chats = new Array()
     } 
     
     addContact(user) {
-        if (server.searchUser(user.name) && !this.contacts.has(user.name)) {
+        if (this.server.searchUser(user.name) && !this.contacts.has(user.name)) {
             this.contacts.set(user.name, user)
             let chat = new Chat([this, user])
             user.contacts.set(this.name, this)
@@ -36,7 +36,7 @@ class User {
     }
     createChat(users) {
         for(let i = 0; i < users.length;i++){
-            if(server.searchUser(users[i].name)==false) return
+            if(this.server.searchUser(users[i].name)==false) return null
         }
         let chat = new Chat(users)
         for(let i = 0; i < users.length; i++){
@@ -64,22 +64,20 @@ function consoleUser(user, index) {
 }
 
 function main() {
-    var array = new Array()
-    let i
-    let j
-    for (i = 0; i < users.length; i++) {
-        array.push(new User(users[i].userName, users[i].pic))
-    }
-    for (i = 0; i < array.length; i++) {
-        for (j = 0; j < array.length; j++) {
+    let server = new Server()
+    server.initialize()
+    let array = Array.from(server.userDB.values())
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
             if (i != j) {
                 array[i].addContact(array[j])
             }
         }
     }
     array[0].createChat(array)
-    server.addUser("haha", "password", "jjjj.png")
+    server.register("haha", "password", "jjjj.png")
     array[0].addContact(new User("haha", "jjjj.png"))
+    array = Array.from(server.userDB.values())
     array.forEach(consoleUser)
 }
 export default User
