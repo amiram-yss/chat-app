@@ -19,11 +19,7 @@ function ChatInterface() {
 
                 </Row>
                 <Row className='messages-container'>
-                    <Container>
-                        <Col>
-                            <MessageBubbleList />
-                        </Col>
-                    </Container>
+                    <MessageBubbleList />
                 </Row>
                 <Row className='submit-block'>
 
