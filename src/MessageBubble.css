@@ -2,24 +2,24 @@
     background-color: lightgreen;
     border-radius: 6px;
     border-top-left-radius: 0px;
+    float: left;
 }
 .message-recieved {
     background-color: lightgray;
     border-radius: 6px;
     border-top-right-radius: 0px;
+    float: right;
 }
 .message-bubble {
     padding: 10px;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
     min-width: 150px;
-    max-width: 60%;
+    max-width: 80%;
     padding-right: 5px;
     padding: 3px;
     border-width: 0.5px;
     margin: 5px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 .message-time {
     position: relative;
@@ -29,4 +29,8 @@
 }
 .message-content {
     font-size: 10px;
+}
+.test{
+    background-color: purple;
+    
 }

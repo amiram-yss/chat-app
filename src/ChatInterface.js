@@ -1,26 +1,53 @@
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import './ChatInterface.css'
+import ChatList from './ChatList'
+import MessageBubbleList from './MessageBubbleList'
 
 function ChatInterface() {
     return (
-        <div className='split-screen'>
-            <div className='left'>
-                <div className='user-info'>
+        <Row className='screen'>
+            <Col className='left'>
+                <Row className='logged-user-info'>
 
-                </div>
-                <div className='chat-list'>
+                </Row>
+                <Row className='chat-list-container'>
+                    <ChatList />
+                </Row>
+            </Col>
+            <Col className='right g-0'>
+                <Row className='chat-user-info'>
 
-                </div>
+                </Row>
+                <Row className='messages-container'>
+                    <Container>
+                        <Col>
+                            <MessageBubbleList />
+                        </Col>
+                    </Container>
+                </Row>
+                <Row className='submit-block'>
 
-            </div>
-            <div className='right flex-sub-container'>
-            <div className='user-info2'/>
-            <div className='messages-container'/>
-            <div className='submit-block flex-item-bottom'/>
-
-            </div>
-        </div>
+                </Row>
+            </Col>
+        </Row>
     )
 }
 
 export default ChatInterface
+/**
+ * <div className='split-screen'>
+            <div className='left'>
+                <div className='user-info'>
+                    
+                </div>
+                <div className='chat-list'>
+
+                </div>
+            </div>
+            <div className='right flex-sub-container'>
+                <div className='user-info2' />
+                <div className='messages-container' />
+                <div className='submit-block flex-item-bottom' />
+            </div>
+        </div>
+ */

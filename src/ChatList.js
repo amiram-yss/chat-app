@@ -1,5 +1,6 @@
-import users from "./server info/users";
+import users from "./server info/Users";
 import ChatTile from "./ChatTile";
+import './ChatList.css'
 function ChatList() {
     var usersList = users.map((user, key) => {
         return (
@@ -8,12 +9,12 @@ function ChatList() {
                 profPic={user.pic}
                 lastMessageTime='18:09'
                 chatTitle={user.userName}
-                lastMessage='JALLIFISHHHH :DDDDD'
+                lastMessage='abcdefghijklmnopqrstuvwxyz1234567890'
             />
         )
     })
     return (
-        <div>
+        <div className="lst">
             {usersList}
         </div>
     )
