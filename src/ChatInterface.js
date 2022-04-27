@@ -1,28 +1,35 @@
 import { Row, Col, Container } from 'react-bootstrap'
 import './ChatInterface.css'
+import ChatList from './ChatList'
+import MessageBubbleList from './MessageBubbleList'
 
 function ChatInterface() {
     return (
-        <Container className='screen'>
-            <Row className='screen'>
-                <Col className='left'>
-                    <Row className='logged-user-info'>
+        <Row className='screen'>
+            <Col className='left'>
+                <Row className='logged-user-info'>
 
-                    </Row>
-                </Col>
-                <Col className='right'>
-                    <Row className='chat-user-info'>
+                </Row>
+                <Row className='chat-list-container'>
+                    <ChatList />
+                </Row>
+            </Col>
+            <Col className='right g-0'>
+                <Row className='chat-user-info'>
 
-                    </Row>
-                    <Row className='messages-container'>
+                </Row>
+                <Row className='messages-container'>
+                    <Container>
+                        <Col>
+                            <MessageBubbleList />
+                        </Col>
+                    </Container>
+                </Row>
+                <Row className='submit-block'>
 
-                    </Row>
-                    <Row className='submit-block'>
-
-                    </Row>
-                </Col>
-            </Row>
-        </Container>
+                </Row>
+            </Col>
+        </Row>
     )
 }
 
