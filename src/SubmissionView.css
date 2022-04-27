@@ -1,0 +1,44 @@
+.test {
+    background-color: brown;
+}
+
+.field {
+    max-width: 350pt;
+
+}
+
+.option {
+    float: left;
+    max-width: fit-content;
+}
+
+.littlrBtn {
+    position: relative;
+    border-radius: 20%;
+    max-width: min-content;
+
+    font-family: fantasy;
+    border: 0px;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 0px;
+    min-height: 40px;
+
+}
+
+.littlrBtn:hover {
+    background-color: lightblue;
+}
+
+.littlrBtn:active {
+    background-color: orchid
+}
+
+.dropdown-menu {
+    width: fit-content;
+}
+
+.box {
+    position: fixed;
+    bottom: 0pt;
+}
