@@ -1,6 +1,8 @@
 import users from '../server info/Users.js'
 import User from './User.js'
+
 class Server{
+    
     constructor() {
         this.loginDB = new Map()
         this.userDB = new Map()
@@ -13,24 +15,40 @@ class Server{
             this.register(users[i].userName, users[i].pass, users[i].pic)
         }
     }
+
     register(name, password, pic) {
         if(!this.userDB.has(name)) {
+            
             this.loginDB.set(name, password)
             this.userDB.set(name, new User(name, pic, this))
+            return true
         }
         else {
-            return null
+            return false
         }
     }
+
     searchUser(name) {
         return this.userDB.has(name)
     }
+
     loggingIn(userName, password){
-        if(this.searchUser(userName) && this.loginDB(userName)===password){
-            return this.userDB(userName)
+        if(this.searchUser(userName) && this.loginDB.get(userName)===password){
+            return this.userDB.get(userName)
         }
         else {
             return null
+        }
+    }
+
+
+    BoolLoggingIn(userName, password){
+        console.log(userName,password,password )
+        if(this.searchUser(userName) && this.loginDB.get(userName)===password){
+            return true
+        }
+        else {
+            return false
         }
     }
 

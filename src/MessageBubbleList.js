@@ -1,7 +1,7 @@
 import MessageBubble from "./MessageBubble";
 import './ChatList.css'
 import { Col, Container, Row } from "react-bootstrap";
-function MessageBubbleList() {
+function MessageBubbleList(User) {
     var messages = [
         {
             addresser: true,

@@ -21,7 +21,7 @@ import { Row } from 'react-bootstrap';
 import users from './server info/Users';
 
 
-function Welcome({ Login }) {
+function Welcome({ Login, Registration }) {
 
 
     return (
@@ -42,7 +42,7 @@ function Welcome({ Login }) {
                                     <Routes>
 
                                         <Route path="/" element={<LoginCard Login={Login} />}></Route>
-                                        <Route path="/register" element={<RegisterCard />}></Route>
+                                        <Route path="/register" element={<RegisterCard Registration={Registration}/>}></Route>
 
                                     </Routes>
                             </div>

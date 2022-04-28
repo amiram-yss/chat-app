@@ -2,9 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import SubmissionView from './SubmissionView';
 import ChatInterface from './ChatInterface';
+import Luncher from './Luncher';
 
 
-/**<Luncher/>
+
+/**
  * 
  *  
  */
@@ -13,8 +15,8 @@ function App() {
 
   return (
     <div >
-      <ChatInterface/>
-      
+      <Luncher />
+
     </div>
   );
 }

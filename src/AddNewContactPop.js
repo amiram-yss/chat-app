@@ -21,7 +21,7 @@ function AddNewContactPop() {
         <div>
             <div className='addNew'>
                 <Button variant="primary btn-sm " onClick={handleShow} data-backdrop='false' data-dismiss='modal'>
-                    <i class="bi bi-person-plus-fill"></i>
+                    <i className="bi bi-person-plus-fill"></i>
                 </Button>
             </div>
 

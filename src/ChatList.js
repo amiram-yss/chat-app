@@ -1,7 +1,8 @@
 import users from "./server info/Users";
 import ChatTile from "./ChatTile";
 import './ChatList.css'
-function ChatList() {
+
+function ChatList(User) {
     var usersList = users.map((user, key) => {
         return (
             <ChatTile
