@@ -3,31 +3,51 @@
 }
 
 .field {
-    max-width: 350pt;
+    width: 100%;
+    float: left;
+    
 
 }
 
-.option {
+.optionBtn {
     float: left;
     max-width: fit-content;
+    min-width: 27px;
+    width: 20px;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-left: 20px;
+
+
+}
+
+.sendBtn{
+    padding-right: 5%;
+    padding-left: 0%;
+
+    max-width: min-content;
+
 }
 
 .littlrBtn {
     position: relative;
-    border-radius: 20%;
+    border-radius: 50%;
     max-width: min-content;
 
-    font-family: fantasy;
     border: 0px;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-right: 5px;
     margin-top: 0px;
-    min-height: 40px;
+    float: left;
+    background-color: ;
+
 
 }
 
 .littlrBtn:hover {
     background-color: lightblue;
+    max-width: min-content;
+
 }
 
 .littlrBtn:active {
@@ -39,6 +59,24 @@
 }
 
 .box {
-    position: fixed;
+    position: sticky;
     bottom: 0pt;
+    clear: both;
+
+    
+
+}
+
+.form-control {
+
+    float: left;
+    height: 20pt;
+    
+
+}
+
+.items {
+    float: left;
+    height: 20pt;
+    margin-top: 5pt;
 }
