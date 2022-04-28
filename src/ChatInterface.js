@@ -35,6 +35,7 @@ function ChatInterface(User) {
                             </Col>
                         </Container>
                     
+
                 </Row>
                 <Row className='submit-block'>
                     <div >
