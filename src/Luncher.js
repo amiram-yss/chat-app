@@ -4,6 +4,8 @@ import ChatTile from './ChatTile';
 import LoginForm from './LoginForm';
 import React from 'react';
 import users from './server info/Users';
+import ChatInterface from './ChatInterface';
+
 
 //import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Switch, Link } from 'react-router-dom';
@@ -11,13 +13,17 @@ import { BrowserRouter, Routes, Route, Switch, Link } from 'react-router-dom';
 import RegistrationForm from './RegistrationForm';
 import {useState} from 'react';
 import Welcome from './Welcome';
+import User from './data stractures/User.js'
+import Server from './data stractures/Server'
 
-function Luncher() {
 
-  const Login = details => {
-    console.log(details);
+var server = new Server()
+server.initialize()
 
-    for (let index = 0; index < users.length; index++) {
+/**
+ * 
+ * @returns 
+ *     for (let index = 0; index < users.length; index++) {
       const element = users[index];
       if (details.name == element.userName && details.password == element.pass) {
         console.log("Well Done!!!");
@@ -27,15 +33,51 @@ function Luncher() {
         return;
       }
     }
+ */
+
+
+function Luncher() {
+
+  
+
+  const Login = details => {
+    console.log(details);
+
+      
+      if (server.BoolLoggingIn(details.name, details.password)) {
+        console.log("Well Done!!!");
+        setUser({
+          name: details.name,
+          password: details.password
+        });
+        return;
+      }
+    
     console.log("NO!");
   }
 
-  const [user, setUser] = useState({ name: "", nickName: "" });
+  const Registration = details => {
+    console.log(details);
+
+      
+      if (server.register(details.name, details.password ,'spongebob.jpg')) {
+        console.log("Well Done!!!");
+        setUser({
+          name: details.name,
+          password: details.password
+        });
+        return;
+      }
+    
+    console.log("NO!");
+  }
+
+  const [user, setUser] = useState({ name: "", nickName: "", password: "" });
 
     return (
         <BrowserRouter>
             <div className='Luncher'>
-                {(user.name != "") ? (<LoginForm />) : (<Welcome Login={Login} />)}
+                {(user.name != "") ? (<ChatInterface User={server.loggingIn(user.name, user.password)}/>) : (<Welcome Login={Login} Registration={Registration}/>)}
             </div>
         </BrowserRouter>
     );

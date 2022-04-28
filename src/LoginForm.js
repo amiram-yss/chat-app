@@ -16,7 +16,7 @@ function LoginForm() {
                         <div className="col-lg-4 mb-5 mb-lg-0">
                             <h1 className="my-5 display-5 fw-bold ls-tight">
                                 Welcome to the inner WhatsApp of   <br />
-                                <span className="text-warning display-3 fw-bold">---</span>
+                                <span className="text-warning display-3 fw-bold">you are in !!!!!</span>
                             </h1>
                             <p className='welcomeText'>
 

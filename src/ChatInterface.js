@@ -5,31 +5,36 @@ import MessageBubbleList from './MessageBubbleList'
 import SubmissionView from './SubmissionView'
 import LogedUserInfo from './LogedUserInfo'
 
+import users from "./server info/Users";
 
 
 
-function ChatInterface() {
+function ChatInterface(User) {
     return (
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
-                    <LogedUserInfo />
+                    <LogedUserInfo User={User}/>
 
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList />
+                    <ChatList User={User}/>
+                    
                 </Row>
             </Col>
             <Col className='right g-0'>
                 <Row className='chat-user-info'>
 
                 </Row>
-                <Row className='messages-container'>
-                    <Container>
-                        <Col>
-                            <MessageBubbleList />
-                        </Col>
-                    </Container>
+                <Row className='messages-container' >
+                    
+                        <Container>
+                            <Col>
+                                <MessageBubbleList User={User}/>
+                                
+                            </Col>
+                        </Container>
+                    
                 </Row>
                 <Row className='submit-block'>
                     <div >

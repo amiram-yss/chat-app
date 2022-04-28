@@ -81,7 +81,7 @@ function main() {
     array.forEach(consoleUser)
 }
 export default User
-main()
+//main()
 
 
 

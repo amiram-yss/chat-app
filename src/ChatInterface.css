@@ -1,3 +1,5 @@
+
+
 .screen {
     background-color: brown;
     min-width: 100vw;
@@ -29,6 +31,8 @@
     border-right: 1px;
 }
 .messages-container {
+
+    background-image: url("../public/background.jpg");
     background-color: chocolate;
     height: calc(100vh - 2cm);
     overflow-y: auto;

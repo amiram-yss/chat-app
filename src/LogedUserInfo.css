@@ -92,4 +92,5 @@
 .newContact{
     position: relative;
     float: right;
+    padding-right: 5pt;
 }
