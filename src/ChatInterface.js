@@ -2,12 +2,18 @@ import { Row, Col, Container } from 'react-bootstrap'
 import './ChatInterface.css'
 import ChatList from './ChatList'
 import MessageBubbleList from './MessageBubbleList'
+import SubmissionView from './SubmissionView'
+import LogedUserInfo from './LogedUserInfo'
+
+
+
 
 function ChatInterface() {
     return (
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
+                    <LogedUserInfo />
 
                 </Row>
                 <Row className='chat-list-container'>
@@ -26,7 +32,9 @@ function ChatInterface() {
                     </Container>
                 </Row>
                 <Row className='submit-block'>
-
+                    <div >
+                        <SubmissionView className='submittion-block' />
+                    </div>
                 </Row>
             </Col>
         </Row>
