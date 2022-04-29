@@ -13,11 +13,12 @@ import './ChatTile.css'
  * @param {lastMessage} Test of last message.
  * @returns 
  */
+var clickedChat = ""
 function ChatTile(args) {
     return (
         <div>
             <div className='spacer' />
-            <Button className="chat-tile-container">
+            <Button className="chat-tile-container" oncklick = {clickedChat = args.chatTitle}>
                 <Row>
                     <Col className='left-col'>
                         <div className='test'>

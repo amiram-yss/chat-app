@@ -16,7 +16,7 @@ class Server{
             this.register(users[i].userName, users[i].pass, users[i].pic)
         }
         this.userDB.get("Krabs").addContact(this.userDB.get("Spongebob"))
-        this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", null))
+        this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", "hahahaha"))
         this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
     }
 

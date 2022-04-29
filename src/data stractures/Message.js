@@ -1,10 +1,10 @@
 
 
 class Message{
-    constructor(addresser, adressee, type, previous) {
+    constructor(addresser, adressee, type, content) {
         this.addresser = addresser
         this.adressee = adressee
         this.type = type
-        this.previous = previous
+        this.content = content
     }
 } export default Message
