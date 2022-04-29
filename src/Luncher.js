@@ -50,10 +50,11 @@ function Luncher() {
           name: details.name,
           password: details.password
         });
-        return;
+        return true;
       }
     
     console.log("NO!");
+    return false;
   }
 
   const Registration = details => {
