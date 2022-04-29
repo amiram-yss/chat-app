@@ -24,7 +24,7 @@ function SubmissionView(args) {
         // if(Text == ""){
         //     return
         // }
-        console.log(Text)
+        console.log(Text.text)
         setText({ text: "" })
 
 
@@ -70,6 +70,7 @@ function SubmissionView(args) {
                 <button className="littlrBtn items" onClick={() => {
                     sendMessage()
                     args.onSubmitClick()
+                    args.REnder()
                 }}>
                     <i class="bi bi-send"></i>
                 </button>

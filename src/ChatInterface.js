@@ -4,22 +4,35 @@ import ChatList from './ChatList'
 import MessageBubbleList from './MessageBubbleList'
 import SubmissionView from './SubmissionView'
 import LogedUserInfo from './LogedUserInfo'
+import { useState } from 'react';
+
 
 import users from "./server info/Users";
 
 
 
 function ChatInterface(User) {
+
+
+    const [A, setA] = useState({ change: "" });
+
+    const REnder = e => {
+        setA({ change: "B" })
+    }
+
+
+
+
     return (
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
-                    <LogedUserInfo User={User}/>
+                    <LogedUserInfo User={User} />
 
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={User}/>
-                    
+                    <ChatList User={User} />
+
                 </Row>
             </Col>
             <Col className='right g-0'>
@@ -27,21 +40,21 @@ function ChatInterface(User) {
 
                 </Row>
                 <Row className='messages-container' >
-                    
-                        <Container>
-                            <Col>
-                                <MessageBubbleList User={User}/>
-                                
-                            </Col>
-                        </Container>
-                    
+
+                    <Container>
+                        <Col>
+                            <MessageBubbleList User={User} />
+
+                        </Col>
+                    </Container>
+
 
                 </Row>
                 <Row className='submit-block'>
                     <div >
-                        <SubmissionView className='submittion-block' onSubmitClick = {()=> {
+                        <SubmissionView className='submittion-block' onSubmitClick={() => {
                             console.log("!!!");
-                        } }/>
+                        }} REnder={REnder}/>
                     </div>
                 </Row>
             </Col>
