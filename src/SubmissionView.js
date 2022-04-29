@@ -2,12 +2,33 @@ import { Button } from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './SubmissionView.css';
 import React from 'react';
+import { useState } from 'react';
+
 
 import AddNewContactPop from './AddNewContactPop';
 
 
 
-function SubmissionView() {
+function SubmissionView(args) {
+
+
+    const [Text, setText] = useState({ text: "" });
+
+    const sendMessage = e => {
+        //e.preventDefault()
+
+        
+
+
+        setText({ text: Text })
+        // if(Text == ""){
+        //     return
+        // }
+        console.log(Text)
+        setText({ text: "" })
+
+
+    }
 
     /**
      * <div></div>
@@ -41,12 +62,15 @@ function SubmissionView() {
 
 
 
-                <input type="text" className="field items" placeholder="Type here..." />
+                <input type="text" className="field items" placeholder="Type here..." onChange={e => setText({ text: e.target.value })} value={Text.text} />
 
             </div>
 
             <div className="col sendBtn">
-                <button className="littlrBtn items">
+                <button className="littlrBtn items" onClick={() => {
+                    sendMessage()
+                    args.onSubmitClick()
+                }}>
                     <i class="bi bi-send"></i>
                 </button>
 
