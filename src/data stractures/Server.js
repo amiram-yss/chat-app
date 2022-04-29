@@ -2,60 +2,58 @@ import users from '../server info/Users.js'
 import Message from './Message.js'
 import User from './User.js'
 
-class Server {
-    var loginDB = new Map()
-    var userDB = new Map()
-constructor() {
-    this.loginDB = new Map()
-    this.userDB = new Map()
-}
-
-initialize(){
-    for (let i = 0; i < users.length; i++) {
-        //this.loginDB.set(users[i].userName, users[i].pass)
-        //this.userDB.set(users[i], new User(users[i].userName, users[i].pic))
-        this.register(users[i].userName, users[i].pass, users[i].pic)
+class Server{
+    
+    constructor() {
+        this.loginDB = new Map()
+        this.userDB = new Map()
     }
-    this.userDB.get("Krabs").addContact(this.userDB.get("Spongebob"))
-    this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", "hahahaha"))
-    this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", "bababababa"))
-    this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
-}
 
-register(name, password, pic) {
-    if (!this.userDB.has(name)) {
+    initialize(){
+        for(let i = 0; i < users.length; i++) {
+            //this.loginDB.set(users[i].userName, users[i].pass)
+            //this.userDB.set(users[i], new User(users[i].userName, users[i].pic))
+            this.register(users[i].userName, users[i].pass, users[i].pic)
+        }
+        this.userDB.get("Krabs").addContact(this.userDB.get("Spongebob"))
+        this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", "hahahaha"))
+        this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
+    }
 
-        this.loginDB.set(name, password)
-        this.userDB.set(name, new User(name, pic, this))
-        return true
+    register(name, password, pic) {
+        if(!this.userDB.has(name)) {
+            
+            this.loginDB.set(name, password)
+            this.userDB.set(name, new User(name, pic, this))
+            return true
+        }
+        else {
+            return false
+        }
     }
-    else {
-        return false
-    }
-}
 
-searchUser(name) {
-    return this.userDB.has(name)
-}
+    searchUser(name) {
+        return this.userDB.has(name)
+    }
 
-loggingIn(userName, password){
-    if (this.searchUser(userName) && this.loginDB.get(userName) === password) {
-        return this.userDB.get(userName)
+    loggingIn(userName, password){
+        if(this.searchUser(userName) && this.loginDB.get(userName)===password){
+            return this.userDB.get(userName)
+        }
+        else {
+            return null
+        }
     }
-    else {
-        return null
-    }
-}
 
 
-BoolLoggingIn(userName, password){
-    console.log(userName, password, password)
-    if (this.searchUser(userName) && this.loginDB.get(userName) === password) {
-        return true
+    BoolLoggingIn(userName, password){
+        console.log(userName,password,password )
+        if(this.searchUser(userName) && this.loginDB.get(userName)===password){
+            return true
+        }
+        else {
+            return false
+        }
     }
-    else {
-        return false
-    }
-}
 
 } export default Server
