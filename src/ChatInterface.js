@@ -39,7 +39,7 @@ function ChatInterface(User) {
                 </Row>
                 <Row className='submit-block'>
                     <div >
-                        <SubmissionView className='submittion-block' />
+                        <SubmissionView className='submittion-block' User={User} />
                     </div>
                 </Row>
             </Col>

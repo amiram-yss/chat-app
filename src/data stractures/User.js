@@ -22,18 +22,22 @@ class User {
         this.picture = picture
         this.server = server
         this.contacts = new Map()
-        this.chats = new Array()
+        this.chats = new Map()
     } 
     
     addContact(user) {
         if (this.server.searchUser(user.name) && !this.contacts.has(user.name)) {
+
             this.contacts.set(user.name, user)
-            let chat = new Chat([this, user])
             user.contacts.set(this.name, this)
+
+            
+            let chat = new Chat([this, user])
             this.chats.push(chat)
             user.addChat(chat)
         }        
     }
+
     createChat(users) {
         for(let i = 0; i < users.length;i++){
             if(this.server.searchUser(users[i].name)==false) return null
@@ -43,6 +47,7 @@ class User {
             users[i].addChat(chat)
         }
     }
+
     addChat(chat) {
         this.chats.push(chat)
     }
