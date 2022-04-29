@@ -1,4 +1,5 @@
 import users from '../server info/Users.js'
+import Message from './Message.js'
 import User from './User.js'
 
 class Server{
@@ -14,6 +15,9 @@ class Server{
             //this.userDB.set(users[i], new User(users[i].userName, users[i].pic))
             this.register(users[i].userName, users[i].pass, users[i].pic)
         }
+        this.userDB.get("Krabs").addContact(this.userDB.get("Spongebob"))
+        this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", null))
+        this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
     }
 
     register(name, password, pic) {

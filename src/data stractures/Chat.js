@@ -1,3 +1,4 @@
+import Message from './Message'
 class Chat {
 
     constructor(users) {

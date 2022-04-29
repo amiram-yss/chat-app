@@ -1,4 +1,4 @@
-const Type = {text, picture, record, video}
+
 
 class Message{
     constructor(addresser, adressee, type, previous) {
@@ -7,4 +7,4 @@ class Message{
         this.type = type
         this.previous = previous
     }
-}
+} export default Message
