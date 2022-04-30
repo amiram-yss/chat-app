@@ -12,7 +12,7 @@ import users from "./server info/Users";
 
 
 
-function ChatInterface(User) {
+function ChatInterface(args) {
 
 
     const [A, setA] = useState({ change: "" });
@@ -34,11 +34,11 @@ function ChatInterface(User) {
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
-                    <LogedUserInfo User={User} />
+                    <LogedUserInfo User={args.User} LogOut = {args.LogOut}/>
 
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={User} changeActiveChat = {changeActiveChat} />
+                    <ChatList User={args.User} changeActiveChat = {changeActiveChat} />
 
                 </Row>
             </Col>
@@ -50,7 +50,7 @@ function ChatInterface(User) {
 
                     <Container>
                         <Col>
-                            <MessageBubbleList User={User} chat={activeChat.activeChat}/>
+                            <MessageBubbleList User={args.User} chat={activeChat.activeChat}/>
 
                         </Col>
                     </Container>

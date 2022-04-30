@@ -58,36 +58,8 @@ function LogedUserInfo(args) {
 
 
                 </div>
-
             </div>
         </div>
-
-
     );
 }
 export default LogedUserInfo
-
-
-/**
- * 
- * 
- *             <div className='pic-col col'>
-                <div className='test'>
-                    <img className='self-prof-pic' src={users.at(1).pic}></img>
-                </div>
-            </div>
-            <div className='row'>
-                <div className='self-chat-title'>
-                    <div >
-                        NAME
-                    </div>
-                </div>
-            </div>
-
-    
-
-            <div className=' col-5 newContact'>
-                <AddNewContactPop />
-            </div>
- *      
- */
