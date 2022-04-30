@@ -10,16 +10,25 @@ import './LogedUserInfo.css'
 import 'bootstrap'
 import './ChatTile.css'
 
-function LogedUserInfo(User) {
-    //console.log(User.User.User.name)
-    console.log(User.User.User)
+function LogedUserInfo(args) {
+
+    const Out = e => {
+        console.log(args.LogOut)
+        args.LogOut();
+
+    }
+
+    //console.warn(args)
+
+    
+    console.log(args.User)
     return (
         <div>
             <div className='row'>
                 <div className='col-2'>
                     <div className='pic-col col'>
                         <div className='test'>
-                            <img className='self-prof-pic' src={User.User.User.picture}></img>
+                            <img className='self-prof-pic' src={args.User.picture}></img>
                         </div>
                     </div>
                 </div>
@@ -27,21 +36,33 @@ function LogedUserInfo(User) {
                 <div className='col'>
                     <div className='self-chat-title'>
                         <div >
-                            {User.User.User.name}
+                            {args.User.name}
                         </div>
                     </div>
                 </div>
 
                 <div className='col'>
+                <div className=' col newContact exitBTN'>
+                        <Button variant="primary btn-sm " onClick={Out} >
+                            <i className="bi bi-box-arrow-right"></i>
+                        </Button>
+                    </div>
+
                     <div className=' col newContact'>
                         <AddNewContactPop />
                     </div>
+
+                    
+
+
+
+
                 </div>
 
             </div>
         </div>
 
-        
+
     );
 }
 export default LogedUserInfo
