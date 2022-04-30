@@ -3,7 +3,7 @@ import './ChatList.css'
 import { Col, Container, Row } from "react-bootstrap";
 
 function MessageBubbleList(args) { //args.User, args.chat
-    console.log(args)
+    console.warn(args.User.server)
     var messagesList
     if(args.chat != "") {
         messagesList = args.chat.messages.map((message, key) => {

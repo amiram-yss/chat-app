@@ -18,8 +18,7 @@ function ChatTile(args) {
         <div>
             <div className='spacer' />
             <Button className="chat-tile-container" onClick = {()=>{
-                console.log(args)
-                let chat = args.User.User.getChat(args.chatTitle)
+                let chat = args.User.getChat(args.chatTitle)
                 console.log("here is chat")
                 console.log(chat)
                 if(chat[0] == undefined) {

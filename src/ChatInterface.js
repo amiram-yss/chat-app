@@ -60,7 +60,7 @@ function ChatInterface(args) {
                 <Row className='submit-block'>
                     <div >
                         <SubmissionView className='submittion-block' onSubmitClick={() => {
-                            console.log("!!!");
+                            console.log('> ' + activeChat.activeChat)
                         }} REnder={REnder}/>
                     </div>
                 </Row>
