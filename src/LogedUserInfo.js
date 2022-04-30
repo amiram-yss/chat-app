@@ -51,6 +51,12 @@ function LogedUserInfo(args) {
                     <div className=' col newContact'>
                         <AddNewContactPop />
                     </div>
+
+                    
+
+
+
+
                 </div>
             </div>
         </div>
