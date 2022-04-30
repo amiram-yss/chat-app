@@ -18,6 +18,8 @@ class Server{
         this.userDB.get("Krabs").addContact(this.userDB.get("Spongebob"))
         this.userDB.get("Krabs").chats[0].sendMessage(new Message("krabs", "Spongebob", "text", "hahahaha"))
         this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
+        this.userDB.get("Krabs").chats[1].sendMessage(new Message("krabs", "Squidward", "text", "HOLLA muchacho"))
+
     }
 
     register(name, password, pic) {

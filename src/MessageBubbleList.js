@@ -3,73 +3,6 @@ import './ChatList.css'
 import { Col, Container, Row } from "react-bootstrap";
 
 function MessageBubbleList(args) { //args.User, args.chat
-    var messages = [
-        {
-            addresser: true,
-            content: 'Hello, how are you?',
-            time: '12:34'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: true,
-            content: 'I\'m good, thx :)',
-            time: '12:36'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-        {
-            addresser: false,
-            content: 'I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you? I\'m doing great! How are you?',
-            time: '12:36'
-        },
-    ]
     console.log(args)
     var messagesList
     if(args.chat != "") {
@@ -87,7 +20,6 @@ function MessageBubbleList(args) { //args.User, args.chat
             )
         })
     }
-    
 
     return (
         <div>
