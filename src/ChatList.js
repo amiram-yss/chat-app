@@ -4,13 +4,13 @@ import './ChatList.css'
 
 function ChatList(args) {// args.User, args.changeActiveChat
     console.log(args)
-    var usersList = args.User.User.chats.map(chat => {
+    var usersList = args.User.chats.map(chat => {
         
         let users = chat.users
         //console.log(users[0])
         let pic = ""
         let name = ""
-        if(users[0].name === args.User.User.name) {
+        if(users[0].name === args.User.name) {
             pic = users[1].picture
             name = users[1].name
         }
