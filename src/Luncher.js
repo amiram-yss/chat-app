@@ -11,7 +11,7 @@ import ChatInterface from './ChatInterface';
 import { BrowserRouter, Routes, Route, Switch, Link } from 'react-router-dom';
 
 import RegistrationForm from './RegistrationForm';
-import {useState} from 'react';
+import { useState } from 'react';
 import Welcome from './Welcome';
 import User from './data stractures/User.js'
 import Server from './data stractures/Server'
@@ -38,21 +38,30 @@ server.initialize()
 
 function Luncher() {
 
-  
+
+
+  const LogOut = e => {
+
+    setUser({
+      name: "",
+      password: ""
+    });
+    return true;
+  }
 
   const Login = details => {
     console.log(details);
 
-      
-      if (server.BoolLoggingIn(details.name, details.password)) {
-        console.log("Well Done!!!");
-        setUser({
-          name: details.name,
-          password: details.password
-        });
-        return true;
-      }
-    
+
+    if (server.BoolLoggingIn(details.name, details.password)) {
+      console.log("Well Done!!!");
+      setUser({
+        name: details.name,
+        password: details.password
+      });
+      return true;
+    }
+
     console.log("NO!");
     return false;
   }
@@ -60,28 +69,28 @@ function Luncher() {
   const Registration = details => {
     console.log(details);
 
-      
-      if (server.register(details.name, details.password ,'spongebob.jpg')) {
-        console.log("Well Done!!!");
-        setUser({
-          name: details.name,
-          password: details.password
-        });
-        return;
-      }
-    
+
+    if (server.register(details.name, details.password, 'spongebob.jpg')) {
+      console.log("Well Done!!!");
+      setUser({
+        name: details.name,
+        password: details.password
+      });
+      return;
+    }
+
     console.log("NO!");
   }
 
   const [user, setUser] = useState({ name: "", nickName: "", password: "" });
 
-    return (
-        <BrowserRouter>
-            <div className='Luncher'>
-                {(user.name != "") ? (<ChatInterface User={server.loggingIn(user.name, user.password)}/>) : (<Welcome Login={Login} Registration={Registration}/>)}
-            </div>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <div className='Luncher'>
+        {(user.name != "") ? (<ChatInterface User={server.loggingIn(user.name, user.password)} LogOut={LogOut} />) : (<Welcome Login={Login} Registration={Registration} />)}
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default Luncher;
