@@ -50,11 +50,9 @@ function Luncher() {
   }
 
   const Login = details => {
-    console.log(details);
 
 
     if (server.BoolLoggingIn(details.name, details.password)) {
-      console.log("Well Done!!!");
       setUser({
         name: details.name,
         password: details.password
@@ -62,7 +60,6 @@ function Luncher() {
       return true;
     }
 
-    console.log("NO!");
     return false;
   }
 
@@ -71,7 +68,6 @@ function Luncher() {
 
 
     if (server.register(details.name, details.password, 'spongebob.jpg')) {
-      console.log("Well Done!!!");
       setUser({
         name: details.name,
         password: details.password
@@ -79,7 +75,6 @@ function Luncher() {
       return;
     }
 
-    console.log("NO!");
   }
 
   const [user, setUser] = useState({ name: "", nickName: "", password: "" });

@@ -27,9 +27,7 @@ function ChatInterface(args) {
         setActiveChat({ activeChat: chat })
     }
 
-    const sendMessage = e => {
-        console.error("!"+activeChat.activeChat)
-    }
+   
 
     return (
         <Row className='screen'>
@@ -56,10 +54,13 @@ function ChatInterface(args) {
                 </Row>
                 <Row className='submit-block'>
                     <div >
-                        <SubmissionView className='submittion-block' onSubmitClick={(message) => {
-                            sendMessage(message)
-                            
-                        }} REnder={REnder} User={args.User} chat = {activeChat.activeChat} />
+                        <SubmissionView
+                            className='submittion-block'
+                            onSubmitClick={(message) => {/** deleted */}}
+                            REnder={REnder}
+                            User={args.User}
+                            chat={activeChat.activeChat}
+                        />
                     </div>
                 </Row>
             </Col>
@@ -68,20 +69,3 @@ function ChatInterface(args) {
 }
 
 export default ChatInterface
-/**
- * <div className='split-screen'>
-            <div className='left'>
-                <div className='user-info'>
-                    
-                </div>
-                <div className='chat-list'>
-
-                </div>
-            </div>
-            <div className='right flex-sub-container'>
-                <div className='user-info2' />
-                <div className='messages-container' />
-                <div className='submit-block flex-item-bottom' />
-            </div>
-        </div>
- */

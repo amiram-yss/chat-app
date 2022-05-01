@@ -16,14 +16,18 @@ function SubmissionView(args) {
     const [Text, setText] = useState({ text: "" });
 
     const sendMessage = e => {
+        var time = new Date()
         //e.preventDefault()
 
         setText({ text: Text })
         // if(Text == ""){
         //     return
         // }
-        console.log(Text.text)
-        args.chat.sendMessage({content: Text.text})
+        let newMessage = {content: Text.text, time: time.getHours()+":"+time.getMinutes()}
+        newMessage.addresser = args.User
+        newMessage.addressee = args.chat
+        console.warn(newMessage)
+        args.chat.sendMessage(newMessage)
         console.info(args.chat)
         setText({ text: "" })
     }

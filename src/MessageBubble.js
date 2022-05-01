@@ -11,7 +11,6 @@ import './MessageBubble.css'
  */
 function MessageBubble(args) {
     const messageType = 'message-bubble ' + (args.addresser ? 'message-sent' : 'message-recieved')
-    console.log('val is ' + args.addresser)
     return (
         <div className='test'>
             <Card className={messageType}>

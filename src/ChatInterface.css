@@ -9,8 +9,8 @@
 }
 .left {
     background-color: green;
-    max-width: 30vw;
-    min-width: 120px;
+    max-width: 25%;
+    min-width: 180px;
     height: 100vh;
     margin-right: 4px;
 }
@@ -37,7 +37,6 @@
     height: calc(100vh - 2cm);
     overflow-y: auto;
     scroll-behavior: smooth;
-    
 }
 .submit-block {
     position: relative;

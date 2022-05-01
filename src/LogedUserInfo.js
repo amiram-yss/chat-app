@@ -13,7 +13,6 @@ import './ChatTile.css'
 function LogedUserInfo(args) {
 
     const Out = e => {
-        console.log(args.LogOut)
         args.LogOut();
 
     }
@@ -21,7 +20,6 @@ function LogedUserInfo(args) {
     //console.warn(args)
 
     
-    console.log(args.User)
     return (
         <div>
             <div className='row'>

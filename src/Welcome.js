@@ -32,7 +32,7 @@ function Welcome({ Login, Registration }) {
                     <div className="col-lg-4 col-md-4 col-sm-4 mb-5 mb-lg-0 ">
                         <h1 className="my-5 display-5 fw-bold ls-tight welcomeText">
                             Welcome to the inner WhatsApp of   <br />
-                            <span className="text-warning display-3 fw-bold">---</span>
+                            <span className="text-warning display-3 fw-bold">Bikini Bottom</span>
                         </h1>
                     </div>
 

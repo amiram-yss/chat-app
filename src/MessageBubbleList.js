@@ -11,7 +11,8 @@ function MessageBubbleList(args) { //args.User, args.chat
                 <Row className="bubble-row">
                     <div className="bubble-row">
                         <MessageBubble
-                            addresser={message.addresser}
+                            addresser={message.addresser == args.User? true: false}
+                            //addressee = {message.addressee}
                             content={message.content}
                             time={message.time}
                         />

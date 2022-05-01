@@ -49,7 +49,6 @@ class Server{
 
 
     BoolLoggingIn(userName, password){
-        console.log(userName,password,password )
         if(this.searchUser(userName) && this.loginDB.get(userName)===password){
             return true
         }

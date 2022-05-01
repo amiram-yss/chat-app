@@ -2,7 +2,6 @@ import users from '../server info/Users.js'
 import Chat from './Chat.js'
 import Server from './Server.js'
 
-console.log("hahaha")
 class UserInfo {
     constructor(name, password) {
         this.name = name
