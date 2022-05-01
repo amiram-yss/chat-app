@@ -8,12 +8,12 @@ import { useState } from 'react';
 import Chat from "./data stractures/User";
 
 import users from "./server info/Users";
+import ActiveChatUserInfo from './ActiveChatUserInfo'
 
 
 
 
 function ChatInterface(args) {
-
 
     const [A, setA] = useState({ change: "" });
 
@@ -27,23 +27,19 @@ function ChatInterface(args) {
         setActiveChat({ activeChat: chat })
     }
 
-
-
     return (
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
                     <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>
-
                 </Row>
                 <Row className='chat-list-container'>
                     <ChatList User={args.User} changeActiveChat={changeActiveChat} />
-
                 </Row>
             </Col>
             <Col className='right g-0'>
                 <Row className='chat-user-info'>
-
+                    <ActiveChatUserInfo chat={activeChat.activeChat} User = {args.User}/>
                 </Row>
                 <Row className='messages-container' >
                     <Container>
