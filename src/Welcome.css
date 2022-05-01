@@ -1,8 +1,9 @@
 .welcomeText{
     position: absolute;
-    top: 10%;
+    top: 0%;
     right: 70%;
     margin-left: 10%;
+    font-family:Georgia, 'Times New Roman', Times, serif
 
 }
 

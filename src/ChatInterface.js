@@ -33,7 +33,7 @@ function ChatInterface(args) {
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
-                    <LogedUserInfo User={args.User} LogOut={args.LogOut} />
+                    <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>
 
                 </Row>
                 <Row className='chat-list-container'>

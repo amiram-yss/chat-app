@@ -8,14 +8,29 @@ import { Modal, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from "react";
 
 
+function AddNewContactPop(args) {
 
 
-
-function AddNewContactPop() {
     const [show, setShow] = useState(false);
+
+    const [Name, setName] = useState({ name: "" });
+
+
+
+    const handleOK = () => {
+        //args.User.addChat("rat");
+        handleClose();
+        args.REnder();
+
+        //args.User.Server.GetUserByName(Name.name)
+
+    }
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+
 
     return (
         <div>
@@ -32,17 +47,20 @@ function AddNewContactPop() {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>add new contact</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    I will not close if you click outside me. Don't even try to press
-                    escape key.
+                    write here new contact from your contacts
                 </Modal.Body>
+                <input type="text" className="field items" placeholder="Type here..." onChange={e => setName({ name: e.target.value })} value={Name.name} />
+
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cancle
                     </Button>
-                    <Button variant="primary">Understood</Button>
+                    <Button variant="primary" onClick={handleOK}>
+                        create
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </div>

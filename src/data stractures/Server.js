@@ -82,4 +82,14 @@ class Server {
         }
     }
 
+
+    GetUserByName(userName){
+        if(this.searchUser(userName) ){
+            return this.userDB.get(userName)
+        }
+        else {
+            return null
+        }
+    }
+
 } export default Server
