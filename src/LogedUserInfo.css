@@ -1,3 +1,44 @@
+.holder{
+    min-width: max-content;
+    overflow-x: hidden;
+    padding-right: 0px;
+    width:100%
+}
+.pic-col {
+    max-width: 1.5cm;
+}
+.self-prof-pic{
+    border-radius: 50%;
+    height: 0.8cm;
+    width: 0.8cm;
+    margin-top: 0.1cm;
+    margin-left: 0.1cm;
+}
+.name-col {
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+.btn-col {
+    min-width: min-content;
+    max-width: min-content;
+    margin-top: 2.5pt;
+    float:right;
+    padding-left: 2px;
+}
+.circ{
+    border-radius: 50%;
+}
+.name-holder {
+    min-width: 80%;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: cursive;
+    font-weight: 550;
+    text-align: left;
+    width: 100%;
+}
+/*
 .chat-tile-container {
     border-radius: 5px;
     position: relative;
@@ -101,3 +142,4 @@
     max-height:20pt;
 
 }
+*/
