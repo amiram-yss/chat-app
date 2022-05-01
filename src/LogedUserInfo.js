@@ -47,7 +47,7 @@ function LogedUserInfo(args) {
                     </div>
 
                     <div className=' col newContact'>
-                        <AddNewContactPop />
+                        <AddNewContactPop User={args.User} REnder={args.REnder}/>
                     </div>
 
                     
