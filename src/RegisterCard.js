@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 
-function RegisterCard ({ Registration }){
+function RegisterCard({ Registration }) {
 
     const [details, setDetails] = useState({ name: "", nickName: "", password: "" });
 
@@ -12,12 +12,13 @@ function RegisterCard ({ Registration }){
         e.preventDefault()
 
         Registration(details);
+
     }
 
 
     return (
 
-        <form className="" onSubmit={submitHandler}>
+        <form className="" >
             <div className="row inputRow">
                 <div className="col-4"><span className="text-danger">User Name</span></div>
                 <div className="col-8 ">
@@ -34,7 +35,7 @@ function RegisterCard ({ Registration }){
                 <div className="col-8 ">
 
                     <div className="form-outline mb-4">
-                        <input type="password" id="form3Example2" className="form-control" onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password}/>
+                        <input type="password" id="form3Example2" className="form-control" onChange={e => setDetails({ ...details, password: e.target.value })} value={details.password} />
                         <label className="form-label" htmlFor="form3Example3"></label>
                     </div>
                 </div>
@@ -45,7 +46,7 @@ function RegisterCard ({ Registration }){
                 <div className="col-8 ">
 
                     <div className="form-outline mb-4">
-                        <input type="text" id="form3Example3" className="form-control" onChange={e => setDetails({ ...details, nickName: e.target.value })} value={details.nickName}/>
+                        <input type="text" id="form3Example3" className="form-control" onChange={e => setDetails({ ...details, nickName: e.target.value })} value={details.nickName} />
                         <label className="form-label" htmlFor="form3Example3"></label>
                     </div>
                 </div>
@@ -53,15 +54,16 @@ function RegisterCard ({ Registration }){
 
 
 
-            <div className="row inputRow">
-                <button type="submit" className="btn btn-primary btn-block mb-4">
+            <div className="row inputRow registerBTN">
+                <Link to="/" className="btn btn-primary " onClick={submitHandler}>
                     register
-                </button>
+                </Link>
             </div>
+            <br></br>
 
             <div className="row">
                 <p >Already register? <Link to="/" >Login</Link></p>
-                
+
 
             </div>
 

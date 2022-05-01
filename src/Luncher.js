@@ -70,8 +70,12 @@ function Luncher() {
 
     if (server.register(details.name, details.password, 'spongebob.jpg')) {
       setUser({
-        name: details.name,
-        password: details.password
+        // name: details.name,
+        // password: details.password
+        name: "",
+        password: ""
+
+
       });
       return;
     }
