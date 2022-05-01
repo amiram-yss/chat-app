@@ -1,10 +1,8 @@
-import { Button } from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './SubmissionView.css';
 import React from 'react';
 import { useState } from 'react';
-
-
+import {Button, InputGroup} from 'react-bootstrap'
 import AddNewContactPop from './AddNewContactPop';
 import User from './data stractures/User';
 
@@ -59,9 +57,9 @@ function SubmissionView(args) {
                     </button>
                 </ul>
             </div>
-
+            
             <div className="col field">
-                <input type="text" className="field items" placeholder="Type here..." onChange={e => setText({ text: e.target.value })} value={Text.text} />
+                <input type="text" className="field msgbox" placeholder="Type here..." onChange={e => setText({ text: e.target.value })} value={Text.text} />
             </div>
 
             <div className="col sendBtn">

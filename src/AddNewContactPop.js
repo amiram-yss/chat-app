@@ -4,7 +4,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './AddNewContactPop.css';
 import SubmissionView from './SubmissionView';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Alert } from 'react-bootstrap';
 import React, { useEffect, useState } from "react";
 
 
@@ -26,7 +26,7 @@ function AddNewContactPop(args) { //User, render
             args.User.addContact(u)
         }
         else {
-            alert("username not found, please try again")
+            Alert("username not found, please try again")
         }
         handleClose();
         args.REnder();

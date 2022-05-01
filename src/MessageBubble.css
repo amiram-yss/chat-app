@@ -12,8 +12,8 @@
 }
 .message-bubble {
     padding: 10px;
-    min-width: 150px;
-    max-width: 70%;
+    min-width: 220px;
+    max-width: 60%;
     padding-right: 5px;
     padding: 3px;
     border-width: 0.5px;
@@ -33,5 +33,4 @@
     float:left;
     overflow: hidden;    
     text-align: left;
-
 }

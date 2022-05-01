@@ -14,13 +14,16 @@
     color:#303030;
 }
 .chat-tile-container:focus {
-    background-color: rgb(97, 147, 130);
-    color:darkred;
+    background-color: rgb(122, 147, 97);
     outline: 1px;
     box-shadow: none;
+    color: rgb(63, 46, 18);
 }
 .selected-tile{
     background-color: rgb(142, 183, 169);
+}
+.selected-tile:hover{
+    background-color: rgb(108, 151, 137);
 }
 .time-text {
     position: absolute;
@@ -61,7 +64,9 @@
     text-align: left;
     width:calc(100% - 3.2cm);
     text-overflow: ellipsis;
+    max-height: max-content;
     overflow: hidden;
+    white-space: nowrap;
 }
 .notification-bubble {
     position: absolute;
