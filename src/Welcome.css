@@ -3,7 +3,15 @@
     top: 0%;
     right: 70%;
     margin-left: 10%;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+    
+
+}
+
+.bikiniText{
+    color: greenyellow;
+    font-family:Georgia, 'Times New Roman';
 
 }
 
@@ -39,6 +47,10 @@ padding: 75%,70%,60%,0%;
     padding-bottom: 50pt;
 }
 
+.screen{
+    background-image: url("../public/bikiniBottom.jpg");
+    /* background-color: chartreuse; */
+}
 
 
 
