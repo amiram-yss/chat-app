@@ -3,10 +3,9 @@
 }
 
 .field {
-    width: 100%;
+    width: 105%;
     float: left;
-    
-
+    position: relative;
 }
 
 .optionBtn {
@@ -17,16 +16,14 @@
     padding-right: 0%;
     padding-left: 0%;
     margin-left: 20px;
-
-
 }
 
 .sendBtn{
     padding-right: 5%;
     padding-left: 0%;
-
     max-width: min-content;
-
+    margin-left: 0px;
+    margin-left: 45px;
 }
 
 .littlrBtn {
@@ -37,7 +34,7 @@
     border: 0px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 0px;
+    margin-top: 1px;
     float: left;
     background-color: ;
 
@@ -78,7 +75,10 @@
 .items {
     float: left;
     height: 20pt;
-    margin-top: 5pt;
+    margin-top: 6pt;
+    min-height: 1cm;
+    min-width: 1cm;
+    background-color: transparent;
 }
 
 .OPTbtn{
@@ -87,4 +87,14 @@
     border-width: 0ch;
     border-radius: 50%;
     background-color: aliceblue;
+}
+.msgbox{
+    position: relative;
+    height: 1cm;
+    top:15px;
+    vertical-align: middle;
+    font-size: 26px;
+    margin-top: -6px;
+    border-radius: 6px;
+    border: blue 2px solid;
 }

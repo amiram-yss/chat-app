@@ -28,13 +28,13 @@ function ChatInterface(args) {
     }
 
     return (
-        <Row className='screen'>
+        <Row className='screen g-0'>
             <Col className='left'>
                 <Row className='logged-user-info'>
                     <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={args.User} changeActiveChat={changeActiveChat} />
+                    <ChatList User={args.User} changeActiveChat={changeActiveChat} chat={activeChat.activeChat} />
                 </Row>
             </Col>
             <Col className='right g-0'>

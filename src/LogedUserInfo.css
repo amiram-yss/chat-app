@@ -27,6 +27,10 @@
 }
 .circ{
     border-radius: 50%;
+    height: 1.2cm;
+    width:1.2cm;
+    margin-top: 0.35cm;
+    margin-right: .05cm;
 }
 .name-holder {
     min-width: 80%;

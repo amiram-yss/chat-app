@@ -35,6 +35,7 @@ function ChatList(args) {// args.User, args.changeActiveChat
                 changeActiveChat = {args.changeActiveChat}
                 User = {args.User}
                 key = {name}
+                isSelected = {chat == args.chat}
             />
         )
     })
