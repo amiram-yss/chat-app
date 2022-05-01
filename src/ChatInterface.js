@@ -34,7 +34,7 @@ function ChatInterface(args) {
                     <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={args.User} changeActiveChat={changeActiveChat} />
+                    <ChatList User={args.User} changeActiveChat={changeActiveChat} chat={activeChat.activeChat} />
                 </Row>
             </Col>
             <Col className='right g-0'>

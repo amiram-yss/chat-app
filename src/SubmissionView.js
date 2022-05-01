@@ -42,17 +42,12 @@ function SubmissionView(args) {
      */
 
     return (
-
         <div className="row box">
-
             <div className="col optionBtn">
-
-
                 <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
                     <button className="OPTbtn">
                         <li><a href="#"><i className="dropdown-item bi bi-mic-fill" ></i></a></li>
                     </button >
@@ -62,28 +57,17 @@ function SubmissionView(args) {
                     <button className="OPTbtn">
                         <li><a href="#"><i className="dropdown-item bi bi-image"></i></a></li>
                     </button>
-
-
-
-
-
-
                 </ul>
-
-
             </div>
 
             <div className="col field">
-
-
-
-
                 <input type="text" className="field items" placeholder="Type here..." onChange={e => setText({ text: e.target.value })} value={Text.text} />
-
             </div>
 
             <div className="col sendBtn">
                 <button className="littlrBtn items" onClick={() => {
+                    if (Text.text == '')
+                        return
                     sendMessage()
                     args.onSubmitClick(Text.text)
                     args.REnder()

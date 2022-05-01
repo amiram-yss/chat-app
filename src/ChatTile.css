@@ -14,10 +14,13 @@
     color:#303030;
 }
 .chat-tile-container:focus {
-    background-color: burlywood;
+    background-color: rgb(97, 147, 130);
     color:darkred;
     outline: 1px;
     box-shadow: none;
+}
+.selected-tile{
+    background-color: rgb(142, 183, 169);
 }
 .time-text {
     position: absolute;
