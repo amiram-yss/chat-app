@@ -40,7 +40,7 @@
 }
 .submit-block {
     position: relative;
-    background-color: red;
+    background-color: rgb(32, 157, 170);
     height: 1cm;  
     vertical-align: bottom;  
 }

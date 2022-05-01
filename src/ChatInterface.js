@@ -27,7 +27,7 @@ function ChatInterface(args) {
         setActiveChat({ activeChat: chat })
     }
 
-   
+
 
     return (
         <Row className='screen'>
@@ -48,7 +48,10 @@ function ChatInterface(args) {
                 <Row className='messages-container' >
                     <Container>
                         <Col>
-                            <MessageBubbleList User={args.User} chat={activeChat.activeChat} />
+                            <MessageBubbleList
+                                User={args.User}
+                                chat={activeChat.activeChat}
+                            />
                         </Col>
                     </Container>
                 </Row>
@@ -56,7 +59,7 @@ function ChatInterface(args) {
                     <div >
                         <SubmissionView
                             className='submittion-block'
-                            onSubmitClick={(message) => {/** deleted */}}
+                            onSubmitClick={(message) => {/** deleted */ }}
                             REnder={REnder}
                             User={args.User}
                             chat={activeChat.activeChat}
