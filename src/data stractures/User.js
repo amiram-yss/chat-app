@@ -46,6 +46,14 @@ class User {
     addChat(chat) {
         this.chats.push(chat)
     }
+    getChat(userName){
+        let chat = this.chats.map(ch => {
+            if(ch.users[0].name === userName || ch.users[1].name === userName){
+                return ch
+            }
+        })
+        return chat
+    }
 } 
 
 function consoleUser(user, index) {

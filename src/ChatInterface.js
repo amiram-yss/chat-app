@@ -5,9 +5,10 @@ import MessageBubbleList from './MessageBubbleList'
 import SubmissionView from './SubmissionView'
 import LogedUserInfo from './LogedUserInfo'
 import { useState } from 'react';
-
+import Chat from "./data stractures/User";
 
 import users from "./server info/Users";
+
 
 
 
@@ -18,6 +19,12 @@ function ChatInterface(User) {
 
     const REnder = e => {
         setA({ change: "B" })
+    }
+
+    const [activeChat, setActiveChat] = useState({ activeChat: "" });
+
+    const changeActiveChat = chat => {
+        setActiveChat({ activeChat: chat })
     }
 
 
@@ -31,7 +38,7 @@ function ChatInterface(User) {
 
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={User} />
+                    <ChatList User={User} changeActiveChat = {changeActiveChat} />
 
                 </Row>
             </Col>
@@ -43,7 +50,7 @@ function ChatInterface(User) {
 
                     <Container>
                         <Col>
-                            <MessageBubbleList User={User} />
+                            <MessageBubbleList User={User} chat={activeChat.activeChat}/>
 
                         </Col>
                     </Container>

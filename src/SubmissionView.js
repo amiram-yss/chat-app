@@ -72,7 +72,7 @@ function SubmissionView(args) {
                     args.onSubmitClick()
                     args.REnder()
                 }}>
-                    <i class="bi bi-send"></i>
+                    <i className="bi bi-send"></i>
                 </button>
 
             </div>

@@ -13,12 +13,22 @@ import './ChatTile.css'
  * @param {lastMessage} Test of last message.
  * @returns 
  */
-var clickedChat = ""
 function ChatTile(args) {
     return (
         <div>
             <div className='spacer' />
-            <Button className="chat-tile-container" oncklick = {clickedChat = args.chatTitle}>
+            <Button className="chat-tile-container" onClick = {()=>{
+                console.log(args)
+                let chat = args.User.User.getChat(args.chatTitle)
+                console.log("here is chat")
+                console.log(chat)
+                if(chat[0] == undefined) {
+                    args.changeActiveChat(chat[1])
+                }
+                else {
+                    args.changeActiveChat(chat[0])
+                }
+                }}>
                 <Row>
                     <Col className='left-col'>
                         <div className='test'>
