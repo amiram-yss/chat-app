@@ -3,7 +3,7 @@ import './ChatList.css'
 import { Col, Container, Row } from "react-bootstrap";
 
 function MessageBubbleList(args) { //args.User, args.chat
-    console.warn(">>> " + args.chat)
+    let msg = args.chat.messages
     var messagesList
     if(args.chat != "") {
         messagesList = args.chat.messages.map((message, key) => {
@@ -12,9 +12,9 @@ function MessageBubbleList(args) { //args.User, args.chat
                     <div className="bubble-row">
                         <MessageBubble
                             addresser={message.addresser == args.User? true: false}
-                            //addressee = {message.addressee}
                             content={message.content}
                             time={message.time}
+                            key = {key}
                         />
                     </div>
                 </Row>
