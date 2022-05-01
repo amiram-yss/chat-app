@@ -25,11 +25,11 @@
     position: relative;
     float: right;
     font-weight: 300;
-    font-size: xx-small;
+    font-size: medium;
 }
 .message-content {
     max-width: max-content;
-    font-size: 10px;
+    font-size: large;
     float:left;
     overflow: hidden;    
     text-align: left;

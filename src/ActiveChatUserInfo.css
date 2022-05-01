@@ -5,12 +5,12 @@
     width:100%
 }
 .pic-col {
-    max-width: 1.5cm;
+    max-width: 2.6cm;
 }
 .self-prof-pic{
     border-radius: 50%;
-    height: 0.8cm;
-    width: 0.8cm;
+    height: 1.8cm;
+    width: 1.8cm;
     margin-top: 0.1cm;
     margin-left: 0.1cm;
 }
@@ -37,4 +37,7 @@
     font-weight: 550;
     text-align: left;
     width: 100%;
+    font-size: larger;
+    font-size: 30px;
+    margin-top: 10px;
 }

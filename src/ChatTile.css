@@ -2,7 +2,7 @@
     border-radius: 5px;
     position: relative;
     width: 100%;
-    height: .9cm;
+    height: 1.8cm;
     background-color: blanchedalmond;
     flood-color: brown;
     border-color: transparent;
@@ -30,36 +30,36 @@
     color: #303030;
     padding-right: 5px;
     font-weight: 100;
-    font-size: xx-small;
+    font-size: medium;
 }
 .prof-pic {
     position: absolute;
-    min-height: 0.8cm;
-    min-width: 0.8cm;
-    max-width: 0.8cm;
-    max-height: 0.8cm;
-    left:1px;
-    top:1px;
+    min-height: 1.6cm;
+    min-width: 1.6cm;
+    max-width: 1.6cm;
+    max-height: 1.6cm;
+    left:.1cm;
+    top:.1cm;
     border-radius: 50%;
 }
 .chat-title {
     position: absolute;
-    left: 0.9cm;
+    left: 2cm;
     top: 0px;
     width: 5px;
-    font-weight: 500;
-    font-size: 12px;
+    font-weight: 640;
+    font-size: 24px;
     text-overflow: ellipsis;
 }
 .last-message {
     position: absolute;
     color: black;
-    left: 0.9cm;
-    bottom: 2px;
-    font-size: 10px;
+    left: 2cm;
+    bottom: 6px;
+    font-size: 16px;
     direction: ltr;
     text-align: left;
-    width:calc(100% - 1.6cm);
+    width:calc(100% - 3.2cm);
     text-overflow: ellipsis;
     overflow: hidden;
 }
