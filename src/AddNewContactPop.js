@@ -22,7 +22,7 @@ function AddNewContactPop(args) { //User, render
         //console.log("this user")
         let u = args.User.server.GetUserByName(Name.name)
         //console.log(u)
-        if(u != null) {
+        if (u != null) {
             args.User.addContact(u)
         }
         else {
@@ -43,12 +43,9 @@ function AddNewContactPop(args) { //User, render
 
     return (
         <div>
-            <div className='addNew'>
-                <Button variant="primary btn-sm " onClick={handleShow} data-backdrop='false' data-dismiss='modal'>
-                    <i className="bi bi-person-plus-fill"></i>
-                </Button>
-            </div>
-
+            <Button variant="primary btn-sm circ" onClick={handleShow} data-backdrop='false' data-dismiss='modal'>
+                <i className="bi bi-person-plus-fill"></i>
+            </Button>
             <Modal
                 show={show}
                 onHide={handleClose}

@@ -8,6 +8,6 @@
     z-index: 1040 !important;
 }
 
-.addNew {
-    padding-top: 2pt;
+.circ {
+    border-radius: 50%;
 }
