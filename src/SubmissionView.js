@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 
 import AddNewContactPop from './AddNewContactPop';
+import User from './data stractures/User';
 
 
 
@@ -17,17 +18,14 @@ function SubmissionView(args) {
     const sendMessage = e => {
         //e.preventDefault()
 
-        
-
-
         setText({ text: Text })
         // if(Text == ""){
         //     return
         // }
         console.log(Text.text)
+        args.chat.sendMessage({content: Text.text})
+        console.info(args.chat)
         setText({ text: "" })
-
-
     }
 
     /**
@@ -69,7 +67,7 @@ function SubmissionView(args) {
             <div className="col sendBtn">
                 <button className="littlrBtn items" onClick={() => {
                     sendMessage()
-                    args.onSubmitClick()
+                    args.onSubmitClick(Text.text)
                     args.REnder()
                 }}>
                     <i className="bi bi-send"></i>

@@ -50,19 +50,3 @@ function ChatTile(args) {
     );
 }
 export default ChatTile
-/**
- * <div className='test'>
-            <div className='spacer' />
-            <Button className="chat-tile-container">
-                <Col>
-                {args.unreadCounter < 1 ? <></> : <Badge className='notification-bubble'>{args.unreadCounter}</Badge>}
-                <img className='prof-pic' src={args.profPic}></img>
-                <div className='chat-title'>{args.chatTitle}</div>
-                <div className='last-message'>{args.lastMessage}</div>
-                </Col>
-                <div className='time-text'>
-                    {args.lastMessageTime}
-                </div>
-            </Button>     
-        </div>
- */

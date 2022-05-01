@@ -27,18 +27,19 @@ function ChatInterface(args) {
         setActiveChat({ activeChat: chat })
     }
 
-
-
+    const sendMessage = e => {
+        console.error("!"+activeChat.activeChat)
+    }
 
     return (
         <Row className='screen'>
             <Col className='left'>
                 <Row className='logged-user-info'>
-                    <LogedUserInfo User={args.User} LogOut = {args.LogOut}/>
+                    <LogedUserInfo User={args.User} LogOut={args.LogOut} />
 
                 </Row>
                 <Row className='chat-list-container'>
-                    <ChatList User={args.User} changeActiveChat = {changeActiveChat} />
+                    <ChatList User={args.User} changeActiveChat={changeActiveChat} />
 
                 </Row>
             </Col>
@@ -47,21 +48,18 @@ function ChatInterface(args) {
 
                 </Row>
                 <Row className='messages-container' >
-
                     <Container>
                         <Col>
-                            <MessageBubbleList User={args.User} chat={activeChat.activeChat}/>
-
+                            <MessageBubbleList User={args.User} chat={activeChat.activeChat} />
                         </Col>
                     </Container>
-
-
                 </Row>
                 <Row className='submit-block'>
                     <div >
-                        <SubmissionView className='submittion-block' onSubmitClick={() => {
-                            console.log('> ' + activeChat.activeChat)
-                        }} REnder={REnder}/>
+                        <SubmissionView className='submittion-block' onSubmitClick={(message) => {
+                            sendMessage(message)
+                            
+                        }} REnder={REnder} User={args.User} chat = {activeChat.activeChat} />
                     </div>
                 </Row>
             </Col>
