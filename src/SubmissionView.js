@@ -23,7 +23,7 @@ function SubmissionView(args) {
         // if(Text == ""){
         //     return
         // }
-        let newMessage = {content: Text.text, time: time.getHours()+":"+time.getMinutes()}
+        let newMessage = { content: Text.text, time: time.getHours() + ":" + time.getMinutes() }
         newMessage.addresser = args.User
         newMessage.addressee = args.chat
         console.warn(newMessage)
@@ -36,6 +36,8 @@ function SubmissionView(args) {
      * <div></div>
      * 
      *  <AddNewContactPop/>
+     * 
+     * //onclick="doupload()"
      *
      */
 
@@ -50,12 +52,24 @@ function SubmissionView(args) {
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a href="#"><i className="dropdown-item bi bi-mic-fill"></i></a></li>
-                    <li><a href="#"><i className="dropdown-item bi bi-camera-reels"></i></a></li>
-                    <li><a href="#"><i className="dropdown-item bi bi-geo-alt"></i></a></li>
-                    <li><a href="#"><i className="dropdown-item bi bi-image"></i></a></li>
+
+                    <button className="OPTbtn">
+                        <li><a href="#"><i className="dropdown-item bi bi-mic-fill" ></i></a></li>
+                    </button >
+                    <button className="OPTbtn">
+                        <li><a href="#"><i className="dropdown-item bi bi-camera-reels"></i></a></li>
+                    </button>
+                    <button className="OPTbtn">
+                        <li><a href="#"><i className="dropdown-item bi bi-image"></i></a></li>
+                    </button>
+
+
+
+
+
 
                 </ul>
+
 
             </div>
 
