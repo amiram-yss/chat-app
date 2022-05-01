@@ -55,7 +55,7 @@ function RegisterCard({ Registration }) {
 
 
             <div className="row inputRow registerBTN">
-                <Link to="/" className="btn btn-primary " onClick={submitHandler}>
+                <Link to="/" className="btn btn-primary " onMouseDown={submitHandler}>
                     register
                 </Link>
             </div>
