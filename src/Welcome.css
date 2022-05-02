@@ -52,11 +52,11 @@ padding: 75%,70%,60%,0%;
     /* background-color: chartreuse; */
 }
 
-.test{
-    /* border: 5pt; */
+/* .test{
+    border: 5pt;
     background-color: blue;
-    /* border-color: black;
-    border-style: solid; */
+    border-color: black;
+    border-style: solid;
     cursor: pointer;
 
 }
@@ -93,11 +93,11 @@ padding: 75%,70%,60%,0%;
     z-index: 1;
   }
 
-  /* .fitBTN:hover {
+  .fitBTN:hover {
     background-color: rgb(71, 71, 130);
-  } */
+  }
 
-  
+   */
 
 
 
