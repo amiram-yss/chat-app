@@ -29,6 +29,9 @@ function SubmissionView(args) {
             args.chat.sendMessage(newMessage)
             console.info(args.chat)
         }
+        else {
+            alert("please select chat")
+        }
         
         setText({ text: "" })
     }
