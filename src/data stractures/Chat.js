@@ -19,13 +19,24 @@ class Chat {
 
     }
 
-    async upload(file, type, addresser, addressee) {
+    async upload(file, addresser, addressee) {
         let a = await this.convertBase64(file)
-        console.log(a)
+        console.log("this is base64", a)
+        let type = "txt"
+        if(a.startsWith('data:audio')) {
+            type = "rec"
+        }
+        if(a.startsWith('data:video')) {
+            type = "vid"
+        }
+        if(a.startsWith('data:image')) {
+            type = "img"
+        }
+        
         this.sendMessage({
             content: a,
             type: type,
-            time: "11:45",
+            time: new Date(),
             addresser: addresser,
             addressee: addressee
         })

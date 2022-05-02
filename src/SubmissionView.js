@@ -21,13 +21,19 @@ function SubmissionView(args) {
         // if(Text == ""){
         //     return
         // }
-        let newMessage = { content: Text.text, time: new Date() }
-        newMessage.addresser = args.User
-        newMessage.addressee = args.chat
-        args.chat.sendMessage(newMessage)
-        console.info(args.chat)
+        if(args.chat != "") {
+            let newMessage = { content: Text.text, time: new Date() }
+            newMessage.addresser = args.User
+            newMessage.addressee = args.chat
+            newMessage.type = "txt"
+            args.chat.sendMessage(newMessage)
+            console.info(args.chat)
+        }
+        
         setText({ text: "" })
     }
+
+
 
     /**
      * <div></div>
@@ -39,19 +45,44 @@ function SubmissionView(args) {
      */
 
     return (
+        
         <div className="row box">
+            <input type="file" accept="video/*" name="" id="input_video" hidden onChange={async (e) => {
+                if(args.chat != ""){
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
+                    args.REnder()
+                }
+            }}></input>
+            <input type="file" accept="audio/*" name="" id="input_audio" hidden onChange={async (e) => {
+                if(args.chat != ""){
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
+                    args.REnder()
+                }
+            }}></input>
+            <input type="file" accept="image/*" name="" id="input_image" hidden onChange={async (e) => {
+                if(args.chat != ""){
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
+                    args.REnder()
+                }
+            }}></input>
             <div className="col optionBtn">
                 <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <button className="OPTbtn">
+                    <button className="OPTbtn" onClick={()=>{
+                        document.getElementById("input_audio").click()
+                    }}>
                         <li><a href="#"><i className="dropdown-item bi bi-mic-fill" ></i></a></li>
                     </button >
-                    <button className="OPTbtn">
+                    <button className="OPTbtn" onClick={()=>{
+                        document.getElementById("input_video").click()
+                    }}>
                         <li><a href="#"><i className="dropdown-item bi bi-camera-reels"></i></a></li>
                     </button>
-                    <button className="OPTbtn">
+                    <button className="OPTbtn" onClick={()=>{
+                        document.getElementById("input_image").click()
+                    }}>
                         <li><a href="#"><i className="dropdown-item bi bi-image"></i></a></li>
                     </button>
                 </ul>

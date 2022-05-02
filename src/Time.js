@@ -13,7 +13,7 @@ function getDateString(date) {
 }
 
 function getTimeString(date) {
-    console.log(date.toString())
+    //console.log(date.toString())
     let hour = date.getHours().toString()
     let minute = date.getMinutes().toString().padStart(2, '0')
     return hour + ':' + minute

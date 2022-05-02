@@ -26,9 +26,17 @@ function ChatInterface(args) {
     const changeActiveChat = chat => {
         setActiveChat({ activeChat: chat })
     }
-
+/*
+<input type={"file"} onChange={(e) => {
+                if(activeChat.activeChat != ""){
+                    activeChat.activeChat.upload(e.target.files[0])
+                }
+            }}/>
+            */
     return (
+        
         <Row className='screen g-0'>
+            
             <Col className='left'>
                 <Row className='logged-user-info'>
                     <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>

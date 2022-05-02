@@ -24,7 +24,7 @@ function AddNewContactPop(args) { //User, render
             args.User.addContact(u)
         }
         else {
-            Alert("username not found, please try again")
+            alert("username not found, please try again")
         }
         handleClose();
         args.REnder();

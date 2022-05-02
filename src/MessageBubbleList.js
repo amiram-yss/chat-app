@@ -15,6 +15,7 @@ function MessageBubbleList(args) { //args.User, args.chat
                             content={message.content}
                             time={message.time}
                             key = {key}
+                            type = {message.type}
                         />
                     </div>
                 </Row>
