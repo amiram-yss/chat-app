@@ -19,30 +19,30 @@ class Server {
         this.userDB.get("Krabs").chats[0].sendMessage
             ({
                 content: "Krusty Krab?",
-                time: "11:30",
+                time: new Date(),
                 addresser: this.userDB.get("Krabs"),
                 addressee: this.userDB.get("Spongebob")
             })
         this.userDB.get("Krabs").chats[0].sendMessage
             ({
                 content: "KrAsty CrUb!!",
-                time: "11:33",
+                time: new Date(),
                 addresser: this.userDB.get("Spongebob"),
                 addressee: this.userDB.get("Krabs")
             })
         this.userDB.get("Krabs").chats[0].sendMessage
             ({
                 content: "Rusty cab :D!!",
-                time: "11:36",
+                time: new Date(),
                 addresser: this.userDB.get("Krabs"),
                 addressee: this.userDB.get("Spongebob")
             })
         this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
         this.userDB.get("Krabs").chats[1].sendMessage({
             content: "Shut UP",
-            time: "11:45",
+            time: new Date(),
             addresser: "Krabs",
-            addressee: "Squidward"
+            addressee: "Squidward",
         })
 
     }

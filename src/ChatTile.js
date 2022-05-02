@@ -2,7 +2,6 @@
 import { Button, Badge, Row, Col, Container } from 'react-bootstrap';
 import 'bootstrap'
 import './ChatTile.css'
-
 /**
  * Chat tile, set on the main page on the left.
  * @param {*} args
@@ -20,8 +19,6 @@ function ChatTile(args) {
             <div className='spacer' />
             <Button className={cName} onClick = {()=>{
                 let chat = args.User.getChat(args.chatTitle)
-                console.log("here is chat")
-                console.log(chat)
                 if(chat != null) {
                     args.changeActiveChat(chat)
                 }}}>

@@ -18,10 +18,8 @@ function AddNewContactPop(args) { //User, render
 
 
     const handleOK = () => {
-        //args.User.addChat("rat");
-        //console.log("this user")
+
         let u = args.User.server.GetUserByName(Name.name)
-        //console.log(u)
         if (u != null) {
             args.User.addContact(u)
         }
