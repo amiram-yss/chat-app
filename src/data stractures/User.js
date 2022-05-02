@@ -16,8 +16,9 @@ class User {
      * @param {*} picture picture
      * @param {*} server server
      */
-    constructor(name, picture, server) {
+    constructor(name, picture, server, nickName = name) {
         this.name = name
+        this.nickName = nickName
         this.picture = picture
         this.server = server
         this.contacts = new Map()
@@ -33,6 +34,10 @@ class User {
             user.addChat(chat)
         }        
     }
+    changeProfilePicture(pic) {
+        this.picture = pic
+    }
+
     createChat(users) {
         for(let i = 0; i < users.length;i++){
             if(this.server.searchUser(users[i].name)==false) return null

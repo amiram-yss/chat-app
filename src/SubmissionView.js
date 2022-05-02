@@ -8,9 +8,16 @@ import User from './data stractures/User';
 
 
 
+
 function SubmissionView(args) {
 
-
+    const randomName = () => {
+        if(args.chat == "") {
+            console.log("here")
+            alert("please select chat")
+            document.getElementById("ChatList").click()
+        }
+    }
     const [Text, setText] = useState({ text: "" });
 
     const sendMessage = e => {
@@ -21,12 +28,18 @@ function SubmissionView(args) {
         // if(Text == ""){
         //     return
         // }
-        let newMessage = { content: Text.text, time: new Date() }
-        newMessage.addresser = args.User
-        newMessage.addressee = args.chat
-        newMessage.type = "txt"
-        args.chat.sendMessage(newMessage)
-        console.info(args.chat)
+        if(args.chat != "") {
+            let newMessage = { content: Text.text, time: new Date() }
+            newMessage.addresser = args.User
+            newMessage.addressee = args.chat
+            newMessage.type = "txt"
+            args.chat.sendMessage(newMessage)
+            console.info(args.chat)
+        }
+        else {
+            alert("please select chat")
+        }
+        
         setText({ text: "" })
     }
 
@@ -46,24 +59,24 @@ function SubmissionView(args) {
         <div className="row box">
             <input type="file" accept="video/*" name="" id="input_video" hidden onChange={async (e) => {
                 if(args.chat != ""){
-                    await args.chat.upload(e.target.files[0])
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
                     args.REnder()
                 }
             }}></input>
             <input type="file" accept="audio/*" name="" id="input_audio" hidden onChange={async (e) => {
                 if(args.chat != ""){
-                    await args.chat.upload(e.target.files[0])
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
                     args.REnder()
                 }
             }}></input>
             <input type="file" accept="image/*" name="" id="input_image" hidden onChange={async (e) => {
                 if(args.chat != ""){
-                    await args.chat.upload(e.target.files[0])
+                    await args.chat.upload(e.target.files[0], args.User, args.chat)
                     args.REnder()
                 }
             }}></input>
             <div className="col optionBtn">
-                <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={randomName}>
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

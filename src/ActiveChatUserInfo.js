@@ -17,7 +17,7 @@ function ActiveChatUserInfo(args) {
             </Col>
             <Col className='name-col g-1'>
                 <span className='name-holder'>
-                    {args.chat.getAddresee(args.User).name}
+                    {args.chat.getAddresee(args.User).nickName}
                 </span>
             </Col>
         </Row >

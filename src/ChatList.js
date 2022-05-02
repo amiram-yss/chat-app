@@ -17,12 +17,15 @@ function ChatList(args) {// args.User, args.changeActiveChat
         let users = chat.users
         let pic = ""
         let name = ""
+        let nickName = ""
         if (users[0].name === args.User.name) {
             pic = users[1].picture
+            nickName = users[1].nickName
             name = users[1].name
         }
         else {
             pic = users[0].picture
+            nickName = users[0].nickName
             name = users[0].name
         }
         let lstMsg = chat.getLastMessage()
@@ -37,7 +40,8 @@ function ChatList(args) {// args.User, args.changeActiveChat
                 unreadCounter={0}
                 profPic={pic}
                 lastMessageTime={time}
-                chatTitle={name}
+                chatTitle={nickName}
+                chatId={name}
                 lastMessage={content}
                 changeActiveChat={args.changeActiveChat}
                 User={args.User}

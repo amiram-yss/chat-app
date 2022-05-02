@@ -19,6 +19,7 @@ import RegisterCard from './RegisterCard';
 import 'react-bootstrap'
 import { Row } from 'react-bootstrap';
 import users from './server info/Users';
+import { Button } from 'bootstrap';
 
 
 function Welcome({ Login, Registration }) {
@@ -39,12 +40,10 @@ function Welcome({ Login, Registration }) {
                     <div className="col-lg-8 col-md-8 col-sm-8 mb-5 mb-lg-3">
                         <div id="cardBlock" className="card ">
                             <div className="card-body py-5 px-md-5">
-                                    <Routes>
-
-                                        <Route path="/" element={<LoginCard Login={Login} />}></Route>
-                                        <Route path="/register" element={<RegisterCard Registration={Registration}/>}></Route>
-
-                                    </Routes>
+                                <Routes>
+                                    <Route path="/" element={<LoginCard Login={Login} />}></Route>
+                                    <Route path="/register" element={<RegisterCard Registration={Registration} />}></Route>
+                                </Routes>
                             </div>
                         </div>
                     </div>

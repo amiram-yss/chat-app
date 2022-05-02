@@ -41,13 +41,13 @@ function ChatInterface(args) {
                 <Row className='logged-user-info'>
                     <LogedUserInfo User={args.User} LogOut={args.LogOut} REnder={REnder}/>
                 </Row>
-                <Row className='chat-list-container'>
+                <Row className='chat-list-container' id = "ChatList">
                     <ChatList User={args.User} changeActiveChat={changeActiveChat} chat={activeChat.activeChat} />
                 </Row>
             </Col>
             <Col className='right g-0'>
                 <Row className='chat-user-info'>
-                    <ActiveChatUserInfo chat={activeChat.activeChat} User = {args.User}/>
+                    <ActiveChatUserInfo chat={activeChat.activeChat} User = {args.User} REnder = {REnder}/>
                 </Row>
                 <Row className='messages-container' >
                     <Container>
