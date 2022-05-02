@@ -1,14 +1,19 @@
 
 import ChatTile from "./ChatTile";
-import './ChatList.css'
+import './Time'
+import timeStringForComponents from './Time'
 
 function ChatList(args) {// args.User, args.changeActiveChat
+    args.User.chats.sort((chat1, chat2) => {
+        if (chat1.getLastMessage().time < chat2.getLastMessage().time)
+            return 1
+        return -1})
+
     var usersList = args.User.chats.map(chat => {
-        
         let users = chat.users
         let pic = ""
         let name = ""
-        if(users[0].name === args.User.name) {
+        if (users[0].name === args.User.name) {
             pic = users[1].picture
             name = users[1].name
         }
@@ -17,12 +22,10 @@ function ChatList(args) {// args.User, args.changeActiveChat
             name = users[0].name
         }
         let lstMsg = chat.getLastMessage()
-        console.log("last message")
-        console.log(lstMsg)
-        let time = null
-        let content = null
-        if(lstMsg != undefined) {
-            time = lstMsg.time
+        let time = ''
+        let content = ''
+        if (lstMsg != undefined) {
+            time = timeStringForComponents(lstMsg.time)
             content = lstMsg.content
         }
         return (
@@ -32,10 +35,10 @@ function ChatList(args) {// args.User, args.changeActiveChat
                 lastMessageTime={time}
                 chatTitle={name}
                 lastMessage={content}
-                changeActiveChat = {args.changeActiveChat}
-                User = {args.User}
-                key = {name}
-                isSelected = {chat == args.chat}
+                changeActiveChat={args.changeActiveChat}
+                User={args.User}
+                key={name}
+                isSelected={chat == args.chat}
             />
         )
     })
