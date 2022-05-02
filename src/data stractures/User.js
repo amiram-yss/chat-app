@@ -46,12 +46,12 @@ class User {
         this.chats.push(chat)
     }
     getChat(userName){
-        let chat = this.chats.map(ch => {
-            if(ch.users[0].name === userName || ch.users[1].name === userName){
-                return ch
+        for(let i = 0; i < this.chats.length; i++) {
+            if(this.chats[i].users[0].name === userName || this.chats[i].users[1].name === userName){
+                return this.chats[i]
             }
-        })
-        return chat
+        }
+        return null
     }
 } 
 

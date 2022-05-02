@@ -21,12 +21,16 @@ function ChatTile(args) {
                 let chat = args.User.getChat(args.chatTitle)
                 console.log("here is chat")
                 console.log(chat)
+                if(chat != null) {
+                    args.changeActiveChat(chat)
+                }
+                /*
                 if(chat[0] == undefined) {
                     args.changeActiveChat(chat[1])
                 }
                 else {
                     args.changeActiveChat(chat[0])
-                }
+                }*/
                 }}>
                 <Row>
                     <Col className='left-col'>

@@ -16,14 +16,22 @@ function ChatList(args) {// args.User, args.changeActiveChat
             pic = users[0].picture
             name = users[0].name
         }
-        var lstMsg = chat.getLastMessage()
+        let lstMsg = chat.getLastMessage()
+        console.log("last message")
+        console.log(lstMsg)
+        let time = null
+        let content = null
+        if(lstMsg != undefined) {
+            time = lstMsg.time
+            content = lstMsg.content
+        }
         return (
             <ChatTile
                 unreadCounter={0}
                 profPic={pic}
-                lastMessageTime={lstMsg.time}
+                lastMessageTime={time}
                 chatTitle={name}
-                lastMessage={lstMsg.content}
+                lastMessage={content}
                 changeActiveChat = {args.changeActiveChat}
                 User = {args.User}
                 key = {name}

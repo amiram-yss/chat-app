@@ -8,7 +8,7 @@ import { Modal, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from "react";
 
 
-function AddNewContactPop(args) {
+function AddNewContactPop(args) { //User, render
 
 
     const [show, setShow] = useState(false);
@@ -19,6 +19,15 @@ function AddNewContactPop(args) {
 
     const handleOK = () => {
         //args.User.addChat("rat");
+        //console.log("this user")
+        let u = args.User.server.GetUserByName(Name.name)
+        //console.log(u)
+        if(u != null) {
+            args.User.addContact(u)
+        }
+        else {
+            alert("username not found, please try again")
+        }
         handleClose();
         args.REnder();
 
