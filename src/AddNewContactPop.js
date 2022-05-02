@@ -20,14 +20,15 @@ function AddNewContactPop(args) { //User, render
     const handleOK = () => {
 
         let u = args.User.server.GetUserByName(Name.name)
+        
         if (u != null && u.name != args.User.name) {
             args.User.addContact(u)
         }
-        else if(u.name == args.User.name){
-            alert("cant add yourself as contact")
+        else if (u == null) {
+            alert("username not found, please try again")
         }
         else {
-            alert("username not found, please try again")
+            alert("cant add yourself as contact")
         }
         handleClose();
         args.REnder();
