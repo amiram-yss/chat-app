@@ -19,6 +19,7 @@ import Server from './data stractures/Server'
 
 var server = new Server()
 server.initialize()
+server.upload("C:\Users\ben\Downloads\Blank diagram (1).png")
 
 /**
  * 

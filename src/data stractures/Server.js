@@ -92,4 +92,8 @@ class Server {
         }
     }
 
+    upload(filePath){
+        
+    }
+
 } export default Server
