@@ -42,4 +42,7 @@
     font-weight: 550;
     text-align: left;
     width: 100%;
+    text-align: left;
+    width:calc(100% - 3.2cm);
+    overflow: hidden;
 }
