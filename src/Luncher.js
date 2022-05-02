@@ -70,7 +70,7 @@ function Luncher() {
     if(nickName == "") {
       nickName = details.name
     }
-    if (server.register(details.name, details.password, 'spongebob.jpg', nickName)) {
+    if (server.register(details.name, details.password, 'logo192.png', nickName)) {
       setUser({
         // name: details.name,
         // password: details.password
