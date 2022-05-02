@@ -11,3 +11,13 @@
 .circ {
     border-radius: 50%;
 }
+.txtbox{
+    width: 90%;
+    align-items: center;
+    margin-left: 5%;
+    margin-top:0px;
+    margin-bottom:30px;
+}
+.msg {
+    padding-left: 6%;
+}

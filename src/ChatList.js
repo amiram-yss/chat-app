@@ -11,7 +11,6 @@ function ChatList(args) {// args.User, args.changeActiveChat
         } catch {
             return -1
         }
-        
         return -1})
 
     var usersList = args.User.chats.map(chat => {

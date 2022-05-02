@@ -4,7 +4,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './AddNewContactPop.css';
 import SubmissionView from './SubmissionView';
-import { Modal, Button, Alert } from 'react-bootstrap';
+import { Modal, Button, Alert, Form } from 'react-bootstrap';
 import React, { useEffect, useState } from "react";
 
 
@@ -53,10 +53,22 @@ function AddNewContactPop(args) { //User, render
                 <Modal.Header closeButton>
                     <Modal.Title>add new contact</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className='msg'>
                     write here new contact from your contacts
                 </Modal.Body>
-                <input type="text" className="field items" placeholder="Type here..." onChange={e => setName({ name: e.target.value })} value={Name.name} />
+
+                <Form>
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Control
+                            className='txtbox'
+                            type="input"
+                            placeholder="Insert username:"
+                            onChange={e => setName({ name: e.target.value })}
+                            value={Name.name}
+                            autoFocus
+                        />
+                    </Form.Group>
+                </Form>
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
@@ -74,7 +86,8 @@ function AddNewContactPop(args) { //User, render
 export default AddNewContactPop;
 
 /**
- * 
+ *                 <input type="text" className="field items" placeholder="Type here..." onChange={e => setName({ name: e.target.value })} value={Name.name} />
+
  * 
  *            
  */
