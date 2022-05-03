@@ -6,7 +6,7 @@ function MessageBubbleList(args) { //args.User, args.chat
     let msg = args.chat.messages
     var messagesList
     if(args.chat != "") {
-        messagesList = args.chat.messages.map((message, key) => {
+        messagesList = args.chat.messages.map((message) => {
             return (
                 <Row className="bubble-row">
                     <div className="bubble-row">
@@ -14,19 +14,19 @@ function MessageBubbleList(args) { //args.User, args.chat
                             addresser={message.addresser == args.User? true: false}
                             content={message.content}
                             time={message.time}
-                            key = {key}
                             type = {message.type}
                         />
                     </div>
                 </Row>
             )
         })
+        //console.log(messagesList)
     }
 
     return (
         <div>
             <Col>
-                <div messagesList="lst">
+                <div>
                     {messagesList}
                 </div>
             </Col>
