@@ -56,6 +56,7 @@ class User {
 } 
 
 function consoleUser(user, index) {
+    /*
     console.log("USER:")
     console.log("===============")
     console.log(user.name)
@@ -68,6 +69,7 @@ function consoleUser(user, index) {
         for(let j = 0; j < user.chats[i].users.length; j++)
         console.log(user.chats[i].users[j].name)
     }
+    */
 }
 
 function main() {

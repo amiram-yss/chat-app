@@ -18,15 +18,13 @@ function AddNewContactPop(args) { //User, render
 
 
     const handleOK = () => {
-        //args.User.addChat("rat");
-        //console.log("this user")
+
         let u = args.User.server.GetUserByName(Name.name)
-        //console.log(u)
         if (u != null) {
             args.User.addContact(u)
         }
         else {
-            Alert("username not found, please try again")
+            alert("username not found, please try again")
         }
         handleClose();
         args.REnder();

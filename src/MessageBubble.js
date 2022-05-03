@@ -3,6 +3,7 @@
  */
 import { Card, Container } from 'react-bootstrap'
 import './MessageBubble.css'
+import timeStringForComponents from './Time'
 
 /**
  * Message bubble item for chat view
@@ -16,7 +17,7 @@ function MessageBubble(args) {
             <Card className={messageType}>
                 <span className='message-content'>{args.content}</span>
                 <div>
-                    <span className='message-time'>{args.time}</span>
+                    <span className='message-time'>{timeStringForComponents(args.time)}</span>
                 </div>
             </Card>
         </div>

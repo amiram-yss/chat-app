@@ -24,16 +24,7 @@ server.upload("C:\Users\ben\Downloads\Blank diagram (1).png")
 /**
  * 
  * @returns 
- *     for (let index = 0; index < users.length; index++) {
-      const element = users[index];
-      if (details.name == element.userName && details.password == element.pass) {
-        console.log("Well Done!!!");
-        setUser({
-          name: details.name
-        });
-        return;
-      }
-    }
+ *    
  */
 
 
@@ -65,8 +56,6 @@ function Luncher() {
   }
 
   const Registration = details => {
-    console.log(details);
-
 
     if (server.register(details.name, details.password, 'spongebob.jpg')) {
       setUser({

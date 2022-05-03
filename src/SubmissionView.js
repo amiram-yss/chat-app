@@ -21,10 +21,9 @@ function SubmissionView(args) {
         // if(Text == ""){
         //     return
         // }
-        let newMessage = { content: Text.text, time: time.getHours() + ":" + time.getMinutes() }
+        let newMessage = { content: Text.text, time: new Date() }
         newMessage.addresser = args.User
         newMessage.addressee = args.chat
-        console.warn(newMessage)
         args.chat.sendMessage(newMessage)
         console.info(args.chat)
         setText({ text: "" })
