@@ -63,7 +63,7 @@ class Server {
             type: "img"
         })
         this.userDB.get("Krabs").chats[1].sendMessage({
-            content: "Screen_Recording_20220502-220051_YouTube.mp4",
+            content: "Screen_Recording_20220502-220051_YouTube (2).mp4",
             time: new Date(),
             addressee: this.userDB.get("Squidward"),
             addresser: this.userDB.get("Krabs"),
