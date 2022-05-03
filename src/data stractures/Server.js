@@ -42,7 +42,8 @@ class Server {
             content: "Shut UP",
             time: "11:45",
             addresser: "Krabs",
-            addressee: "Squidward"
+            addressee: "Squidward",
+            type: type
         })
 
     }
