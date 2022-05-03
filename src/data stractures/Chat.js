@@ -23,7 +23,8 @@ class Chat {
         let a = await this.convertBase64(file)
         console.log(a)
         this.sendMessage({
-            content: "a",
+            content: a,
+            type: type,
             time: "11:45",
             addresser: addresser,
             addressee: addressee

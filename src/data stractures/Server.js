@@ -43,7 +43,6 @@ class Server {
             time: "11:45",
             addresser: "Krabs",
             addressee: "Squidward",
-            type: type
         })
 
     }
