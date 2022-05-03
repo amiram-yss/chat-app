@@ -52,6 +52,9 @@ class Server {
     }
 
     register(name, password, pic) {
+        if(name == "" || password == "") {
+            return false
+        }
         if (!this.userDB.has(name)) {
 
             this.loginDB.set(name, password)

@@ -10,9 +10,17 @@ function RegisterCard({ Registration }) {
 
     const submitHandler = e => {
         e.preventDefault()
-
-        Registration(details);
-
+        if(Registration(details) == false) {
+            if(details.name == "") {
+                alert("username empty")
+            }
+            else if (details.password == "") {
+                alert("password empty")
+            }
+            else {
+                alert("username already exists")
+            }
+        }
     }
 
 

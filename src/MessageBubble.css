@@ -34,3 +34,7 @@
     overflow: hidden;    
     text-align: left;
 }
+.limitedSizedBubble {
+    max-height: 200px !important; 
+    max-width: 200px !important;
+}
