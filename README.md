@@ -4,7 +4,7 @@ Devs:
 
 Amiram Yassif: 314985474
 Ariel Barmatz: 314970054
-Ben Rotlevi: 315350868
+Ben Rotlevy: 315350868
 
 hard-coded users:
 
