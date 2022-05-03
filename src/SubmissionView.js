@@ -30,7 +30,7 @@ function SubmissionView(args) {
             console.info(args.chat)
         }
         else {
-            alert("no active chat")
+            alert("please select chat")
         }
         
         setText({ text: "" })
