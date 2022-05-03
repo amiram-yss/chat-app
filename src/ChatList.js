@@ -5,8 +5,13 @@ import timeStringForComponents from './Time'
 
 function ChatList(args) {// args.User, args.changeActiveChat
     args.User.chats.sort((chat1, chat2) => {
-        if (chat1.getLastMessage().time < chat2.getLastMessage().time)
+        try {
+            if (chat1.getLastMessage().time < chat2.getLastMessage().time)
             return 1
+        } catch {
+            return -1
+        }
+        
         return -1})
 
     var usersList = args.User.chats.map(chat => {
