@@ -8,9 +8,16 @@ import User from './data stractures/User';
 
 
 
+
 function SubmissionView(args) {
 
-
+    const randomName = () => {
+        if(args.chat == "") {
+            console.log("here")
+            alert("please select chat")
+            document.getElementById("ChatList").click()
+        }
+    }
     const [Text, setText] = useState({ text: "" });
 
     const sendMessage = e => {
@@ -69,7 +76,7 @@ function SubmissionView(args) {
                 }
             }}></input>
             <div className="col optionBtn">
-                <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="optionBtn littlrBtn items" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={randomName}>
                     <i className="bi bi-paperclip"></i>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
