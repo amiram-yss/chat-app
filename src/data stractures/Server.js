@@ -44,9 +44,30 @@ class Server {
         this.userDB.get("Krabs").chats[1].sendMessage({
             content: "Shut UP",
             time: new Date(),
-            addresser: "Krabs",
-            addressee: "Squidward",
+            addressee: this.userDB.get("Krabs"),
+            addresser: this.userDB.get("Squidward"),
             type: "txt"
+        })
+        this.userDB.get("Krabs").chats[1].sendMessage({
+            content: "BACK TO WOTK, SQUIDWARD! >:( ",
+            time: new Date(),
+            addressee: this.userDB.get("Squidward"),
+            addresser: this.userDB.get("Krabs"),
+            type: "txt"
+        })
+        this.userDB.get("Krabs").chats[1].sendMessage({
+            content: "krabs.jpg",
+            time: new Date(),
+            addressee: this.userDB.get("Squidward"),
+            addresser: this.userDB.get("Krabs"),
+            type: "img"
+        })
+        this.userDB.get("Krabs").chats[1].sendMessage({
+            content: "Screen_Recording_20220502-220051_YouTube.mp4",
+            time: new Date(),
+            addressee: this.userDB.get("Squidward"),
+            addresser: this.userDB.get("Krabs"),
+            type: "vid"
         })
 
     }
