@@ -35,6 +35,6 @@
     text-align: left;
 }
 .limitedSizedBubble {
-    max-height: 200px !important; 
-    max-width: 200px !important;
+    max-height: 500px !important; 
+    max-width: 500px !important;
 }

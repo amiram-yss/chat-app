@@ -5,6 +5,8 @@ import { Card, Container } from 'react-bootstrap'
 import './MessageBubble.css'
 import timeStringForComponents from './Time'
 
+
+
 /**
  * Message bubble item for chat view
  * @param {*} args content, time
@@ -15,9 +17,10 @@ function MessageBubble(args) {
     const messageType = 'message-bubble ' + (args.addresser ? 'message-sent' : 'message-recieved')
     let messagecontent = (<span className='message-content'>{args.content}</span>)
     let mimeType = args.content.match(/[^:]\w+\/[\w-+\d.]+(?=;|,)/)
-    console.log("content: ", mimeType)
+    //console.log("content: ", mimeType)
     if(args.type == "img") {
-        messagecontent = (<img src={args.content} max-height="200px" max-width="200px"></img>)
+
+        messagecontent = (<img src={(args.content)} className="limitedSizedBubble"></img>)
     }
     if(args.type == "vid") {
         messagecontent = (<video controls>
