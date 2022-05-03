@@ -23,12 +23,14 @@ function MessageBubble(args) {
         messagecontent = (<img src={(args.content)} className="limitedSizedBubble"></img>)
     }
     if(args.type == "vid") {
+        if(mimeType == null) mimeType = ["video/mp4"]
         messagecontent = (<video controls>
             <source type={mimeType[0]} src={args.content} height="200px" width="200px"></source>
 
             </video>)
     }
     if(args.type == "rec") {
+        if(mimeType == null) mimeType = ["audio/mp3"]
         messagecontent = (<audio controls>
             <source type={mimeType[0]} src={args.content} height="200px" width="200px"></source>
 
