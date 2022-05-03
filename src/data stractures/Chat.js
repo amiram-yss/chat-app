@@ -18,7 +18,7 @@ class Chat {
         return this.users[0]
 
     }
-    resizeImage(base64Str, maxWidth = 500, maxHeight = 500) {
+    static resizeImage(base64Str, maxWidth = 500, maxHeight = 500) {
         return new Promise((resolve) => {
           let img = new Image()
           img.src = base64Str
@@ -49,7 +49,7 @@ class Chat {
         })
       }
     async upload(file, addresser, addressee) {
-        let a = await this.convertBase64(file)
+        let a = await Chat.convertBase64(file)
         console.log("this is base64", a)
         let type = "txt"
         if(a.startsWith('data:audio')) {
@@ -60,7 +60,7 @@ class Chat {
         }
         if(a.startsWith('data:image')) {
             type = "img"
-            a = await this.resizeImage(a)
+            a = await Chat.resizeImage(a)
         }
         this.sendMessage({
             content: a,
@@ -71,7 +71,7 @@ class Chat {
         })
     }
 
-    convertBase64(file) {
+    static convertBase64(file) {
         return new Promise((resolve, reject) => {
             const fileReader = new FileReader()
             fileReader.readAsDataURL(file)

@@ -13,12 +13,13 @@ import './ChatTile.css'
  * @returns 
  */
 function ChatTile(args) {
+    console.log("args: ", args)
     var cName = "chat-tile-container " + (args.isSelected ? "selected-tile":"")
     return (
         <div>
             <div className='spacer' />
             <Button className={cName} onClick = {()=>{
-                let chat = args.User.getChat(args.chatTitle)
+                let chat = args.User.getChat(args.chatId)
                 if(chat != null) {
                     args.changeActiveChat(chat)
                 }}}>

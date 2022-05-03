@@ -2,6 +2,7 @@ import { Button, Badge, Row, Col, Container } from 'react-bootstrap';
 import users from "./server info/Users";
 import AddNewContactPop from "./AddNewContactPop";
 import User from './data stractures/User.js'
+import Chat from './data stractures/Chat.js'
 import './LogedUserInfo.css'
 import 'bootstrap'
 import './ChatTile.css'
@@ -13,8 +14,17 @@ function LogedUserInfo(args) {
     }
     return (
         <Row className='holder'>
+            <input type="file" accept="image/*" name="" id="prof_pic_update" hidden onChange={async (e) => {
+                
+                let newIm = await Chat.convertBase64(e.target.files[0])
+                args.User.changeProfilePicture(newIm)
+                args.REnder()
+                
+            }}></input>
             <Col className='pic-col'>
-                <img className='self-prof-pic' src={args.User.picture} />
+                <img className='self-prof-pic' src={args.User.picture} onClick={()=>{
+                        document.getElementById("prof_pic_update").click()
+                    }}  />
             </Col>
             <Col className='name-col g-1'>
                 <span className='name-holder'>

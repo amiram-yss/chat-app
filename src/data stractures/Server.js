@@ -51,14 +51,14 @@ class Server {
 
     }
 
-    register(name, password, pic) {
+    register(name, password, pic, nickName = name) {
         if(name == "" || password == "") {
             return false
         }
         if (!this.userDB.has(name)) {
 
             this.loginDB.set(name, password)
-            this.userDB.set(name, new User(name, pic, this))
+            this.userDB.set(name, new User(name, pic, this, nickName))
             return true
         }
         else {

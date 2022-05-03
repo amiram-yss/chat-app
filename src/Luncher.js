@@ -66,9 +66,11 @@ function Luncher() {
 
   const Registration = details => {
     console.log(details);
-
-
-    if (server.register(details.name, details.password, 'spongebob.jpg')) {
+    let nickName = details.nickName
+    if(nickName == "") {
+      nickName = details.name
+    }
+    if (server.register(details.name, details.password, 'spongebob.jpg', nickName)) {
       setUser({
         // name: details.name,
         // password: details.password
