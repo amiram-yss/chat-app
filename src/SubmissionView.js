@@ -44,19 +44,19 @@ function SubmissionView(args) {
     return (
         
         <div className="row box">
-            <input type="file" name="" id="input_video" hidden onChange={async (e) => {
+            <input type="file" accept="video/*" name="" id="input_video" hidden onChange={async (e) => {
                 if(args.chat != ""){
                     await args.chat.upload(e.target.files[0])
                     args.REnder()
                 }
             }}></input>
-            <input type="file" name="" id="input_audio" hidden onChange={async (e) => {
+            <input type="file" accept="audio/*" name="" id="input_audio" hidden onChange={async (e) => {
                 if(args.chat != ""){
                     await args.chat.upload(e.target.files[0])
                     args.REnder()
                 }
             }}></input>
-            <input type="file" name="" id="input_image" hidden onChange={async (e) => {
+            <input type="file" accept="image/*" name="" id="input_image" hidden onChange={async (e) => {
                 if(args.chat != ""){
                     await args.chat.upload(e.target.files[0])
                     args.REnder()

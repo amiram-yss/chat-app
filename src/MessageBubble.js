@@ -17,7 +17,7 @@ function MessageBubble(args) {
     let mimeType = args.content.match(/[^:]\w+\/[\w-+\d.]+(?=;|,)/)
     console.log("content: ", mimeType)
     if(args.type == "img") {
-        messagecontent = (<img src={args.content} maxheight="200px" maxwidth="400px"></img>)
+        messagecontent = (<img src={args.content} max-height="200px" max-width="200px"></img>)
     }
     if(args.type == "vid") {
         messagecontent = (<video controls>
