@@ -24,8 +24,8 @@ class Chat {
         console.log("this is base64", a)
         this.sendMessage({
             content: a,
-            type: type,
-            time: "11:45",
+            type: "rec",
+            time: new Date(),
             addresser: addresser,
             addressee: addressee
         })

@@ -24,6 +24,7 @@ function SubmissionView(args) {
         let newMessage = { content: Text.text, time: new Date() }
         newMessage.addresser = args.User
         newMessage.addressee = args.chat
+        newMessage.type = "txt"
         args.chat.sendMessage(newMessage)
         console.info(args.chat)
         setText({ text: "" })

@@ -21,21 +21,24 @@ class Server {
                 content: "Krusty Krab?",
                 time: new Date(),
                 addresser: this.userDB.get("Krabs"),
-                addressee: this.userDB.get("Spongebob")
+                addressee: this.userDB.get("Spongebob"),
+                type: "txt"
             })
         this.userDB.get("Krabs").chats[0].sendMessage
             ({
                 content: "KrAsty CrUb!!",
                 time: new Date(),
                 addresser: this.userDB.get("Spongebob"),
-                addressee: this.userDB.get("Krabs")
+                addressee: this.userDB.get("Krabs"),
+                type: "txt"
             })
         this.userDB.get("Krabs").chats[0].sendMessage
             ({
                 content: "Rusty cab :D!!",
                 time: new Date(),
                 addresser: this.userDB.get("Krabs"),
-                addressee: this.userDB.get("Spongebob")
+                addressee: this.userDB.get("Spongebob"),
+                type: "txt"
             })
         this.userDB.get("Krabs").addContact(this.userDB.get("Squidward"))
         this.userDB.get("Krabs").chats[1].sendMessage({
@@ -43,6 +46,7 @@ class Server {
             time: new Date(),
             addresser: "Krabs",
             addressee: "Squidward",
+            type: "txt"
         })
 
     }
